@@ -1,0 +1,2697 @@
+<!DOCTYPE html>
+<html lang="hi" class="dark" id="htmlRoot">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MStram Pro - 2050 Immortal Creator Ecosystem & Advanced UX Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyberdark: '#05050a',
+                        glassdark: 'rgba(13, 13, 26, 0.8)',
+                        neoncyan: '#00f0ff',
+                        neonpurple: '#9d00ff',
+                        neonpink: '#ff007f',
+                        neongreen: '#00ff66',
+                        vipgold: '#ffd700',
+                        dangerred: '#ff0033'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        body.dark {
+            background-color: #05050a;
+            color: #e2e8f0;
+        }
+        body.light {
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        body.dark .glass-panel {
+            background: rgba(18, 18, 38, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+        }
+        body.light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 150, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        body.dark .glass-header {
+            background: rgba(5, 5, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(157, 0, 255, 0.2);
+        }
+        body.light .glass-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        body.dark .glass-nav {
+            background: rgba(8, 8, 20, 0.85);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 240, 255, 0.2);
+        }
+        body.light .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 20px rgba(157, 0, 255, 0.4);
+        }
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+        }
+        .neon-glow-gold {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        .mstram-logo-gradient {
+            background: linear-gradient(135deg, #00f0ff, #ff007f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="dark min-h-screen flex flex-col pb-24 selection:bg-neoncyan selection:text-black" id="bodyElement">
+
+    <!-- ================= TOP HEADER, UNIVERSAL BRANDING & SEARCH ================= -->
+    <header class="glass-header fixed top-0 left-0 right-0 z-50 px-4 py-3 flex items-center justify-between gap-3">
+        <!-- Universal MStram Branding & Cyberpunk Logo -->
+        <div class="flex items-center gap-2.5 cursor-pointer" onclick="switchTab('home')">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-neoncyan via-neonpurple to-neonpink p-0.5 neon-glow-cyan flex items-center justify-center">
+                <div class="w-full h-full bg-cyberdark rounded-[10px] flex items-center justify-center">
+                    <i class="fa-solid fa-cube text-neoncyan text-lg animate-pulse"></i>
+                </div>
+            </div>
+            <div>
+                <h1 class="font-orbitron font-extrabold text-lg tracking-wider mstram-logo-gradient">MStram</h1>
+                <span class="text-[10px] font-orbitron text-neongreen tracking-widest block -mt-1">PRO 2050 HUB</span>
+            </div>
+        </div>
+
+        <!-- Universal Search Bar -->
+        <div class="flex-1 max-w-md relative hidden sm:block">
+            <input type="text" id="universalSearchInput" placeholder="Universal Search (YouTube, OTT, TikTok, Reels, Rare Movies)..." class="w-full bg-cyberdark/80 text-xs text-white placeholder-cyan-400/50 px-4 py-2 rounded-full border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-4 top-2.5 text-neoncyan text-xs"></i>
+        </div>
+
+        <!-- Right Action Icons -->
+        <div class="flex items-center gap-2">
+            <!-- AI Security Status -->
+            <button onclick="openSecurityDashboard()" class="px-2 py-1.5 rounded-xl bg-neongreen/20 text-neongreen border border-neongreen/40 font-orbitron font-bold text-[10px] flex items-center gap-1 active:scale-95 transition-transform" title="AI Security Shield Active">
+                <i class="fa-solid fa-shield-halved animate-pulse"></i> <span id="securityStatusBadge">SHIELD ON</span>
+            </button>
+
+            <!-- Auto-Pilot AI Agent Button -->
+            <button onclick="toggleModal('autoPilotModal')" class="px-2 py-1.5 rounded-xl bg-neonpurple/20 text-neonpurple border border-neonpurple/40 font-orbitron font-bold text-[10px] flex items-center gap-1 active:scale-95 transition-transform" title="Autonomous AI Content Machine">
+                <i class="fa-solid fa-microchip"></i> <span class="hidden md:inline">AUTO-PILOT</span>
+            </button>
+
+            <!-- VIP Pass Badge -->
+            <button onclick="toggleModal('vipPassModal')" class="px-2.5 py-1.5 rounded-xl bg-gradient-to-r from-vipgold to-neonpink text-black font-orbitron font-extrabold text-[10px] neon-glow-gold flex items-center gap-1.5 active:scale-95 transition-transform">
+                <i class="fa-solid fa-crown"></i> <span id="vipBadgeText">VIP PASS</span>
+            
+<!DOCTYPE html>
+<html lang="hi" class="dark" id="htmlRoot">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MStram Pro - 2050 Immortal Creator Ecosystem & 21+ Addiction Weapons Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyberdark: '#05050a',
+                        glassdark: 'rgba(13, 13, 26, 0.8)',
+                        neoncyan: '#00f0ff',
+                        neonpurple: '#9d00ff',
+                        neonpink: '#ff007f',
+                        neongreen: '#00ff66',
+                        vipgold: '#ffd700',
+                        dangerred: '#ff0033'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        body.dark {
+            background-color: #05050a;
+            color: #e2e8f0;
+        }
+        body.light {
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        body.dark .glass-panel {
+            background: rgba(18, 18, 38, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+        }
+        body.light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 150, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        body.dark .glass-header {
+            background: rgba(5, 5, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(157, 0, 255, 0.2);
+        }
+        body.light .glass-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        body.dark .glass-nav {
+            background: rgba(8, 8, 20, 0.85);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 240, 255, 0.2);
+        }
+        body.light .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 20px rgba(157, 0, 255, 0.4);
+        }
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+        }
+        .neon-glow-gold {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        .mstram-logo-gradient {
+            background: linear-gradient(135deg, #00f0ff, #ff007f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="dark min-h-screen flex flex-col pb-24 selection:bg-neoncyan selection:text-black" id="bodyElement">
+
+    <!-- ================= TOP HEADER, BRANDING, SEARCH, NOTIFICATION BELL & MASTER HUB ================= -->
+    <header class="glass-header fixed top-0 left-0 right-0 z-50 px-4 py-3 flex items-center justify-between gap-3">
+        <!-- Universal MStram Branding & Cyberpunk Logo -->
+        <div class="flex items-center gap-2.5 cursor-pointer" onclick="switchTab('home')">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-neoncyan via-neonpurple to-neonpink p-0.5 neon-glow-cyan flex items-center justify-center">
+                <div class="w-full h-full bg-cyberdark rounded-[10px] flex items-center justify-center">
+                    <i class="fa-solid fa-cube text-neoncyan text-lg animate-pulse"></i>
+                </div>
+            </div>
+            <div>
+                <h1 class="font-orbitron font-extrabold text-lg tracking-wider mstram-logo-gradient">MStram</h1>
+                <span class="text-[10px] font-orbitron text-neongreen tracking-widest block -mt-1">PRO 2050 HUB</span>
+            </div>
+        </div>
+
+        <!-- Universal Search Bar -->
+        <div class="flex-1 max-w-md relative hidden sm:block">
+            <input type="text" id="universalSearchInput" placeholder="Universal Search (YouTube, OTT, TikTok, Reels, Rare Movies)..." class="w-full bg-cyberdark/80 text-xs text-white placeholder-cyan-400/50 px-4 py-2 rounded-full border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-4 top-2.5 text-neoncyan text-xs"></i>
+        </div>
+
+        <!-- Right Action Icons: Notification Bell, Security, Master Hub, VIP, Dark/Light -->
+        <div class="flex items-center gap-2">
+            <!-- Notification Bell with Red Dot & Count Badge -->
+            <button onclick="toggleModal('notificationsModal')" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neonpink hover:bg-neonpink/20 transition-all relative" title="Notifications">
+                <i class="fa-solid fa-bell text-sm"></i>
+                <span class="absolute -top-1 -right-1 w-4 h-4 bg-dangerred text-white text-[9px] font-orbitron font-bold rounded-full flex items-center justify-center border border-cyberdark animate-bounce">3</span>
+            </button>
+
+            <!-- AI Security Status -->
+            <button onclick="openSecurityDashboard()" class="px-2 py-1.5 rounded-xl bg-neongreen/20 text-neongreen border border-neongreen/40 font-orbitron font-bold text-[10px] flex items-center gap-1 active:scale-95 transition-transform" title="AI Security Shield Active">
+                <i class="fa-solid fa-shield-halved animate-pulse"></i> <span class="hidden md:inline">SHIELD</span>
+            </button>
+
+            <!-- VIP Pass Badge -->
+            <button onclick="toggleModal('vipPassModal')" class="px-2.5 py-1.5 rounded-xl bg-gradient-to-r from-vipgold to-neonpink text-black font-orbitron font-extrabold text-[10px] neon-glow-gold flex items-center gap-1.5 active:scale-95 transition-transform">
+                <i class="fa-solid fa-crown"></i> <span id="vipBadgeText">VIP</span>
+            </button>
+
+            <!-- Master Features Hub Icon (Two-Box Center) -->
+            <button onclick="toggleMasterHub()" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neoncyan hover:bg-neoncyan/20 neon-glow-cyan transition-all relative group" title="Master 100+ Hub">
+                <i class="fa-solid fa-grid-2 text-sm group-hover:rotate-90 transition-transform duration-300"></i>
+                <span class="absolute -bottom-1 -right-1 w-3 h-3 bg-neongreen rounded-full border-2 border-cyberdark"></span>
+            </button>
+
+            <!-- Dark/Light Mode Toggle -->
+            <button onclick="toggleThemeMode()" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-yellow-400 hover:bg-yellow-400/20 transition-all" title="Toggle Theme">
+                <i id="themeIcon" class="fa-solid fa-sun text-xs"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Universal Search Bar -->
+    <div class="px-4 pt-16 pb-2 sm:hidden">
+        <div class="relative">
+            <input type="text" placeholder="Universal Search (YouTube, OTT, Reels)..." class="w-full bg-cyberdark/90 text-xs text-white placeholder-cyan-400/50 px-4 py-2.5 rounded-xl border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-3.5 top-3 text-neoncyan text-xs"></i>
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN APP VIEWS CONTAINER (5 TABS) ================= -->
+    <main class="flex-1 px-4 pt-2 max-w-7xl mx-auto w-full">
+
+        <!-- ================= TAB 1: HOME FEED ================= -->
+        <div id="tab-home" class="space-y-6 tab-content">
+            
+            <!-- Soft & Helpful AI Guide Assistant -->
+            <section class="rounded-2xl glass-panel p-4 border border-neonpurple/40 neon-glow-purple relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="absolute -left-10 -top-10 w-32 h-32 bg-neonpurple/20 rounded-full blur-2xl pointer-events-none"></div>
+                <div class="flex items-center gap-3.5">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-neonpurple to-neonpink p-0.5 flex-shrink-0 neon-glow-pink">
+                        <div class="w-full h-full bg-cyberdark rounded-[14px] flex items-center justify-center text-neonpink text-xl">
+                            <i class="fa-solid fa-robot animate-bounce"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-0.5">
+                        <div class="flex items-center gap-2">
+                            <h3 class="font-orbitron font-bold text-sm text-white">MStram Gentle AI Guide</h3>
+                            <span class="px-1.5 py-0.2 rounded bg-neongreen/20 text-neongreen text-[9px] font-orbitron">Friendly Assistant</span>
+                        </div>
+                        <p id="aiGuideText" class="text-xs text-gray-300">"नमस्ते Sajeel! 21+ एडिक्शन वेपन्स और AI क्रिएटर स्टूडियो अब लाइव हैं।"</p>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="triggerAiAssistantAudio()" class="px-3 py-2 rounded-xl glass-panel text-neoncyan font-orbitron text-xs hover:bg-neoncyan/20 transition-all whitespace-nowrap">
+                        <i class="fa-solid fa-volume-high mr-1"></i> Speak Guide
+                    </button>
+                    <button onclick="toggleModal('addictionWeaponsModal')" class="px-3 py-2 rounded-xl bg-gradient-to-r from-neonpink to-neonpurple text-white font-orbitron font-bold text-xs hover:neon-glow-pink transition-all whitespace-nowrap">
+                        <i class="fa-solid fa-fire mr-1"></i> 21+ Weapons
+                    </button>
+                </div>
+            </section>
+
+            <!-- Top Commercial Ad Poster -->
+            <section class="relative rounded-2xl overflow-hidden glass-panel p-5 border border-neoncyan/40 neon-glow-cyan group">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-neoncyan/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="space-y-1.5">
+                        <span class="px-2 py-0.5 bg-neongreen/20 text-neongreen border border-neongreen/40 rounded text-[10px] font-orbitron font-bold uppercase">MStram Zero-Cost Architecture</span>
+                        <h2 class="font-orbitron font-bold text-lg sm:text-xl text-white">MStram Quantum Monetization Hub</h2>
+                        <p class="text-xs text-gray-300 max-w-xl">Watch-to-Earn rewards for viewers, 21+ creator addiction weapons, and elite neon trophies.</p>
+                    </div>
+                    <button onclick="openMasterHub()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-neoncyan to-neonpurple text-cyberdark font-orbitron font-bold text-xs hover:neon-glow-cyan transition-all active:scale-95 whitespace-nowrap">
+                        <i class="fa-solid fa-gamepad mr-1.5"></i> Open MStram Hub ($50 Game)
+                    </button>
+                </div>
+            </section>
+
+            <!-- Shorts Horizontal Scroll Row -->
+            <section class="space-y-3">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-orbitron font-bold text-sm text-white flex items-center gap-2">
+                        <i class="fa-solid fa-bolt-lightning text-neonpink"></i> MStram Quantum Shorts & Reels Feed
+                    </h3>
+                    <span class="text-xs text-neoncyan cursor-pointer hover:underline" onclick="switchTab('shorts')">View All</span>
+                </div>
+
+                <div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+                    <div onclick="openInAppPlayer('dQw4w9WgXcQ', 'Secret of Ancient Homo Longi in 2050', 'MStram Official')" class="min-w-[130px] sm:min-w-[150px] h-[220px] rounded-xl glass-panel relative overflow-hidden group cursor-pointer border border-neonpink/30 hover:neon-glow-pink transition-all">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10"></div>
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&auto=format&fit=crop')] bg-cover bg-center group-hover:scale-110 transition-transform duration-500"></div>
+                        <div class="absolute top-2 left-2 z-20 bg-black/70 backdrop-blur-md px-1.5 py-0.5 rounded text-[8px] font-orbitron mstram-logo-gradient font-bold">MStram Pro</div>
+                        <div class="absolute top-2 right-2 z-20 bg-black/60 backdrop-blur-md px-1.5 py-0.5 rounded text-[9px] font-orbitron text-neonpink"><i class="fa-solid fa-play text-[8px]"></i> 1.2M</div>
+                        <div class="absolute bottom-2 left-2 right-2 z-20">
+                            <span class="text-[9px] text-neoncyan block font-orbitron">#MStramAI</span>
+                            <p class="text-xs font-semibold text-white line-clamp-2 leading-tight">Secret of Ancient Homo Longi</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Long Video Feed with Red Progress Line -->
+            <section class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-orbitron font-bold text-sm text-white flex items-center gap-2">
+                        <i class="fa-solid fa-cubes text-neoncyan"></i> MStram Quantum Streams & Long Videos
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="glass-panel rounded-2xl overflow-hidden border border-neoncyan/25 hover:border-neoncyan/70 transition-all group cursor-pointer flex flex-col justify-between" onclick="openInAppPlayer('dQw4w9WgXcQ', 'MStram Official: The Rise of Homo Longi & Ancient Giants in 2050 Hologram Studio', 'MStram Official')">
+                        <div>
+                            <div class="relative aspect-video bg-cyberdark overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Thumbnail">
+                                <div class="absolute top-2 left-2 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-orbitron mstram-logo-gradient font-bold">MStram 4K</div>
+                                <div class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-orbitron text-neoncyan">24:15</div>
+                                
+                                <!-- Red Progress Line (Watch Progress Indicator) -->
+                                <div class="absolute bottom-0 inset-x-0 h-1.5 bg-gray-700/80">
+                                    <div class="h-full bg-dangerred w-[65%]"></div>
+                                </div>
+                            </div>
+                            <div class="p-3.5 space-y-2">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-gradient-to-r from-neoncyan to-neonpurple p-0.5 flex-shrink-0">
+                                        <div class="w-full h-full bg-cyberdark rounded-full flex items-center justify-center font-orbitron font-bold text-xs text-neoncyan">MS</div>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-xs text-white line-clamp-2 leading-snug group-hover:text-neoncyan transition-colors">MStram Official: The Rise of Homo Longi & Ancient Giants in 2050</h4>
+                                        <p class="text-[11px] text-gray-400 mt-0.5">MStram Official • 52 views • 2 hours ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mx-3.5 mb-3.5 p-2 rounded-xl bg-neoncyan/10 border border-neoncyan/30 flex items-center justify-between text-[11px]">
+                            <span class="text-neoncyan font-orbitron"><i class="fa-solid fa-rectangle-ad"></i> MStram Sponsored Ad</span>
+                            <span class="text-neongreen font-bold">Watch-to-Earn Active</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instant Play Games Row -->
+                <div class="pt-2">
+                    <h4 class="font-orbitron font-bold text-xs text-neoncyan mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-gamepad"></i> MStram Instant Play Games & GTA 5 Arena (No Download)
+                    </h4>
+                    <div class
+<!DOCTYPE html>
+<html lang="hi" class="dark" id="htmlRoot">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MStram Pro - 2050 Immortal Creator Ecosystem & Working Thumbnail Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyberdark: '#05050a',
+                        glassdark: 'rgba(13, 13, 26, 0.8)',
+                        neoncyan: '#00f0ff',
+                        neonpurple: '#9d00ff',
+                        neonpink: '#ff007f',
+                        neongreen: '#00ff66',
+                        vipgold: '#ffd700',
+                        dangerred: '#ff0033'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        body.dark {
+            background-color: #05050a;
+            color: #e2e8f0;
+        }
+        body.light {
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        body.dark .glass-panel {
+            background: rgba(18, 18, 38, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+        }
+        body.light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 150, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        body.dark .glass-header {
+            background: rgba(5, 5, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(157, 0, 255, 0.2);
+        }
+        body.light .glass-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        body.dark .glass-nav {
+            background: rgba(8, 8, 20, 0.85);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 240, 255, 0.2);
+        }
+        body.light .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 20px rgba(157, 0, 255, 0.4);
+        }
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+        }
+        .neon-glow-gold {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        .mstram-logo-gradient {
+            background: linear-gradient(135deg, #00f0ff, #ff007f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="dark min-h-screen flex flex-col pb-24 selection:bg-neoncyan selection:text-black" id="bodyElement">
+
+    <!-- ================= TOP HEADER, BRANDING, SEARCH, NOTIFICATION BELL & MASTER HUB ================= -->
+    <header class="glass-header fixed top-0 left-0 right-0 z-50 px-4 py-3 flex items-center justify-between gap-3">
+        <!-- Universal MStram Branding & Cyberpunk Logo -->
+        <div class="flex items-center gap-2.5 cursor-pointer" onclick="switchTab('home')">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-neoncyan via-neonpurple to-neonpink p-0.5 neon-glow-cyan flex items-center justify-center">
+                <div class="w-full h-full bg-cyberdark rounded-[10px] flex items-center justify-center">
+                    <i class="fa-solid fa-cube text-neoncyan text-lg animate-pulse"></i>
+                </div>
+            </div>
+            <div>
+                <h1 class="font-orbitron font-extrabold text-lg tracking-wider mstram-logo-gradient">MStram</h1>
+                <span class="text-[10px] font-orbitron text-neongreen tracking-widest block -mt-1">PRO 2050 HUB</span>
+            </div>
+        </div>
+
+        <!-- Universal Search Bar -->
+        <div class="flex-1 max-w-md relative hidden sm:block">
+            <input type="text" id="universalSearchInput" placeholder="Universal Search (YouTube, OTT, TikTok, Reels, Rare Movies)..." class="w-full bg-cyberdark/80 text-xs text-white placeholder-cyan-400/50 px-4 py-2 rounded-full border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-4 top-2.5 text-neoncyan text-xs"></i>
+        </div>
+
+        <!-- Right Action Icons: Notification Bell, Security, Master Hub, VIP, Dark/Light -->
+        <div class="flex items-center gap-2">
+            <!-- Notification Bell with Red Dot & Count Badge -->
+            <button onclick="toggleModal('notificationsModal')" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neonpink hover:bg-neonpink/20 transition-all relative" title="Notifications">
+                <i class="fa-solid fa-bell text-sm"></i>
+                <span class="absolute -top-1 -right-1 w-4 h-4 bg-dangerred text-white text-[9px] font-orbitron font-bold rounded-full flex items-center justify-center border border-cyberdark animate-bounce">3</span>
+            </button>
+
+            <!-- AI Security Status -->
+            <button onclick="openSecurityDashboard()" class="px-2 py-1.5 rounded-xl bg-neongreen/20 text-neongreen border border-neongreen/40 font-orbitron font-bold text-[10px] flex items-center gap-1 active:scale-95 transition-transform" title="AI Security Shield Active">
+                <i class="fa-solid fa-shield-halved animate-pulse"></i> <span class="hidden md:inline">SHIELD</span>
+            </button>
+
+            <!-- VIP Pass Badge -->
+            <button onclick="toggleModal('vipPassModal')" class="px-2.5 py-1.5 rounded-xl bg-gradient-to-r from-vipgold to-neonpink text-black font-orbitron font-extrabold text-[10px] neon-glow-gold flex items-center gap-1.5 active:scale-95 transition-transform">
+                <i class="fa-solid fa-crown"></i> <span id="vipBadgeText">VIP</span>
+            </button>
+
+            <!-- Master Features Hub Icon (Two-Box Center) -->
+            <button onclick="toggleMasterHub()" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neoncyan hover:bg-neoncyan/20 neon-glow-cyan transition-all relative group" title="Master 100+ Hub">
+                <i class="fa-solid fa-grid-2 text-sm group-hover:rotate-90 transition-transform duration-300"></i>
+                <span class="absolute -bottom-1 -right-1 w-3 h-3 bg-neongreen rounded-full border-2 border-cyberdark"></span>
+            </button>
+
+            <!-- Dark/Light Mode Toggle -->
+            <button onclick="toggleThemeMode()" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-yellow-400 hover:bg-yellow-400/20 transition-all" title="Toggle Theme">
+                <i id="themeIcon" class="fa-solid fa-sun text-xs"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Universal Search Bar -->
+    <div class="px-4 pt-16 pb-2 sm:hidden">
+        <div class="relative">
+            <input type="text" placeholder="Universal Search (YouTube, OTT, Reels)..." class="w-full bg-cyberdark/90 text-xs text-white placeholder-cyan-400/50 px-4 py-2.5 rounded-xl border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-3.5 top-3 text-neoncyan text-xs"></i>
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN APP VIEWS CONTAINER (5 TABS) ================= -->
+    <main class="flex-1 px-4 pt-2 max-w-7xl mx-auto w-full">
+
+        <!-- ================= TAB 1: HOME FEED ================= -->
+        <div id="tab-home" class="space-y-6 tab-content">
+            
+            <!-- Soft & Helpful AI Guide Assistant -->
+            <section class="rounded-2xl glass-panel p-4 border border-neonpurple/40 neon-glow-purple relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="absolute -left-10 -top-10 w-32 h-32 bg-neonpurple/20 rounded-full blur-2xl pointer-events-none"></div>
+                <div class="flex items-center gap-3.5">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-neonpurple to-neonpink p-0.5 flex-shrink-0 neon-glow-pink">
+                        <div class="w-full h-full bg-cyberdark rounded-[14px] flex items-center justify-center text-neonpink text-xl">
+                            <i class="fa-solid fa-robot animate-bounce"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-0.5">
+                        <div class="flex items-center gap-2">
+                            <h3 class="font-orbitron font-bold text-sm text-white">MStram Gentle AI Guide</h3>
+                            <span class="px-1.5 py-0.2 rounded bg-neongreen/20 text-neongreen text-[9px] font-orbitron">Friendly Assistant</span>
+                        </div>
+                        <p id="aiGuideText" class="text-xs text-gray-300">"नमस्ते Sajeel! सभी वीडियो थंबनेल हाई-रेजोल्यूशन और वर्किंग लिंक्स के साथ लोड हो चुके हैं।"</p>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="triggerAiAssistantAudio()" class="px-3 py-2 rounded-xl glass-panel text-neoncyan font-orbitron text-xs hover:bg-neoncyan/20 transition-all whitespace-nowrap">
+                        <i class="fa-solid fa-volume-high mr-1"></i> Speak Guide
+                    </button>
+                    <button onclick="toggleModal('masterHubModal')" class="px-3 py-2 rounded-xl bg-gradient-to-r from-neonpink to-neonpurple text-white font-orbitron font-bold text-xs hover:neon-glow-pink transition-all whitespace-nowrap">
+                        <i class="fa-solid fa-gamepad mr-1"></i> Hub & Games
+                    </button>
+                </div>
+            </section>
+
+            <!-- Top Commercial Ad Poster -->
+            <section class="relative rounded-2xl overflow-hidden glass-panel p-5 border border-neoncyan/40 neon-glow-cyan group">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-neoncyan/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="space-y-1.5">
+                        <span class="px-2 py-0.5 bg-neongreen/20 text-neongreen border border-neongreen/40 rounded text-[10px] font-orbitron font-bold uppercase">MStram Zero-Cost Architecture</span>
+                        <h2 class="font-orbitron font-bold text-lg sm:text-xl text-white">MStram Quantum Monetization Hub</h2>
+                        <p class="text-xs text-gray-300 max-w-xl">Watch-to-Earn rewards for viewers, verified high-res thumbnails, and creator payouts.</p>
+                    </div>
+                    <button onclick="openMasterHub()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-neoncyan to-neonpurple text-cyberdark font-orbitron font-bold text-xs hover:neon-glow-cyan transition-all active:scale-95 whitespace-nowrap">
+                        <i class="fa-solid fa-gamepad mr-1.5"></i> Open MStram Hub ($50 Game)
+                    </button>
+                </div>
+            </section>
+
+            <!-- Shorts Horizontal Scroll Row (With Real Working Thumbnails) -->
+            <section class="space-y-3">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-orbitron font-bold text-sm text-white flex items-center gap-2">
+                        <i class="fa-solid fa-bolt-lightning text-neonpink"></i> MStram Quantum Shorts & Reels Feed
+                    </h3>
+                    <span class="text-xs text-neoncyan cursor-pointer hover:underline" onclick="switchTab('shorts')">View All</span>
+                </div>
+
+                <div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+                    <div onclick="openInAppPlayer('dQw4w9WgXcQ', 'Secret of Ancient Homo Longi in 2050', 'MStram Official')" class="min-w-[130px] sm:min-w-[150px] h-[220px] rounded-xl glass-panel relative overflow-hidden group cursor-pointer border border-neonpink/30 hover:neon-glow-pink transition-all">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Thumbnail">
+                        <div class="absolute top-2 left-2 z-20 bg-black/70 backdrop-blur-md px-1.5 py-0.5 rounded text-[8px] font-orbitron mstram-logo-gradient font-bold">MStram Pro</div>
+                        <div class="absolute top-2 right-2 z-20 bg-black/60 backdrop-blur-md px-1.5 py-0.5 rounded text-[9px] font-orbitron text-neonpink"><i class="fa-solid fa-play text-[8px]"></i> 1.2M</div>
+                        <div class="absolute bottom-2 left-2 right-2 z-20">
+                            <span class="text-[9px] text-neoncyan block font-orbitron">#MStramAI</span>
+                            <p class="text-xs font-semibold text-white line-clamp-2 leading-tight">Secret of Ancient Homo Longi</p>
+                        </div>
+                    </div>
+                    <div onclick="openInAppPlayer('3JZ_D3ELwOQ', 'PK Bhai vs Cyber King in Neon Arena', 'MStram Gaming')" class="min-w-[130px] sm:min-w-[150px] h-[220px] rounded-xl glass-panel relative overflow-hidden group cursor-pointer border border-neoncyan/30 hover:neon-glow-cyan transition-all">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=400&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Thumbnail">
+                        <div class="absolute top-2 left-2 z-20 bg-black/70 backdrop-blur-md px-1.5 py-0.5 rounded text-[8px] font-orbitron mstram-logo-gradient font-bold">MStram Pro</div>
+                        <div class="absolute top-2 right-2 z-20 bg-black/60 backdrop-blur-md px-1.5 py-0.5 rounded text-[9px] font-orbitron text-neoncyan"><i class="fa-solid fa-play text-[8px]"></i> 850K</div>
+                        <div class="absolute bottom-2 left-2 right-2 z-20">
+                            <span class="text-[9px] text-neonpink block font-orbitron">#PKBhai</span>
+                            <p class="text-xs font-semibold text-white line-clamp-2 leading-tight">PK Bhai vs Cyber King</p>
+                        </div>
+                    </div>
+                    <div onclick="openInAppPlayer('kJQP7kiw5Fk', 'Instagram & TikTok Viral Hologram Clip', 'MStram Viral')" class="min-w-[130px] sm:min-w-[150px] h-[220px] rounded-xl glass-panel relative overflow-hidden group cursor-pointer border border-neongreen/30 transition-all">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=400&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Thumbnail">
+                        <div class="absolute top-2 left-2 z-20 bg-black/70 backdrop-blur-md px-1.5 py-0.5 rounded text-[8px] font-orbitron mstram-logo-gradient font-bold">MStram Pro</div>
+                        <div class="absolute top-2 right-2 z-20 bg-black/60 backdrop-blur-md px-1.5 py-0.5 rounded text-[9px] font-orbitron text-neongreen"><i class="fa-solid fa-play text-[8px]"></i> 4.1M</div>
+                        <div class="absolute bottom-2 left-2 right-2 z-20">
+                            <span class="text-[9px] text-neongreen block font-orbitron">#TikTokReels</span>
+                            <p class="text-xs font-semibold text-white line-clamp-2 leading-tight">Viral Hologram Clip</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Long Video Feed with Real Working Thumbnails & Red Progress Line -->
+            <section class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-orbitron font-bold text-sm text-white flex items-center gap-2">
+                        <i class="fa-solid fa-cubes text-neoncyan"></i> MStram Quantum Streams & Long Videos
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Video Card 1 -->
+                    <div class="glass-panel rounded-2xl overflow-hidden border border-neoncyan/25 hover:border-neoncyan/70 transition-all group cursor-pointer flex flex-col justify-between" onclick="openInAppPlayer('dQw4w9WgXcQ', 'MStram Official: The Rise of Homo Longi & Ancient Giants in 2050', 'MStram Official')">
+                        <div>
+                            <div class="relative aspect-video bg-cyberdark overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Thumbnail">
+                                <div class="absolute top-2 left-2 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-orbitron mstram-logo-gradient font-bold">MStram 4K</div>
+                                <div class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-orbitron text-neoncyan
+<!DOCTYPE html>
+<html lang="hi" class="dark" id="htmlRoot">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MStram Pro - 2050 Immortal Creator Ecosystem & AI Challenge Arena</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyberdark: '#05050a',
+                        glassdark: 'rgba(13, 13, 26, 0.8)',
+                        neoncyan: '#00f0ff',
+                        neonpurple: '#9d00ff',
+                        neonpink: '#ff007f',
+                        neongreen: '#00ff66',
+                        vipgold: '#ffd700',
+                        dangerred: '#ff0033'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        body.dark {
+            background-color: #05050a;
+            color: #e2e8f0;
+        }
+        body.light {
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        body.dark .glass-panel {
+            background: rgba(18, 18, 38, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+        }
+        body.light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 150, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        body.dark .glass-header {
+            background: rgba(5, 5, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(157, 0, 255, 0.2);
+        }
+        body.light .glass-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        body.dark .glass-nav {
+            background: rgba(8, 8, 20, 0.85);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 240, 255, 0.2);
+        }
+        body.light .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 20px rgba(157, 0, 255, 0.4);
+        }
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+        }
+        .neon-glow-gold {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        .mstram-logo-gradient {
+            background: linear-gradient(135deg, #00f0ff, #ff007f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="dark min-h-screen flex flex-col pb-24 selection:bg-neoncyan selection:text-black" id="bodyElement">
+
+    <!-- ================= TOP HEADER, BRANDING, SEARCH, NOTIFICATION BELL & MASTER HUB ================= -->
+    <header class="glass-header fixed top-0 left-0 right-0 z-50 px-4 py-3 flex items-center justify-between gap-3">
+        <!-- Universal MStram Branding & Cyberpunk Logo -->
+        <div class="flex items-center gap-2.5 cursor-pointer" onclick="switchTab('home')">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-neoncyan via-neonpurple to-neonpink p-0.5 neon-glow-cyan flex items-center justify-center">
+                <div class="w-full h-full bg-cyberdark rounded-[10px] flex items-center justify-center">
+                    <i class="fa-solid fa-cube text-neoncyan text-lg animate-pulse"></i>
+                </div>
+            </div>
+            <div>
+                <h1 class="font-orbitron font-extrabold text-lg tracking-wider mstram-logo-gradient">MStram</h1>
+                <span class="text-[10px] font-orbitron text-neongreen tracking-widest block -mt-1">PRO 2050 HUB</span>
+            </div>
+        </div>
+
+        <!-- Universal Search Bar -->
+        <div class="flex-1 max-w-md relative hidden sm:block">
+            <input type="text" id="universalSearchInput" placeholder="Universal Search (YouTube, OTT, TikTok, Reels, Rare Movies)..." class="w-full bg-cyberdark/80 text-xs text-white placeholder-cyan-400/50 px-4 py-2 rounded-full border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-4 top-2.5 text-neoncyan text-xs"></i>
+        </div>
+
+        <!-- Right Action Icons: Notification Bell, Security, Master Hub, VIP, Dark/Light -->
+        <div class="flex items-center gap-2">
+            <!-- Notification Bell with Red Dot & Count Badge -->
+            <button onclick="toggleModal('notificationsModal')" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neonpink hover:bg-neonpink/20 transition-all relative" title="Notifications">
+                <i class="fa-solid fa-bell text-sm"></i>
+                <span class="absolute -top-1 -right-1 w-4 h-4 bg-dangerred text-white text-[9px] font-orbitron font-bold rounded-full flex items-center justify-center border border-cyberdark animate-bounce">3</span>
+            </button>
+
+            <!-- AI Security Status -->
+            <button onclick="openSecurityDashboard()" class="px-2 py-1.5 rounded-xl bg-neongreen/20 text-neongreen border border-neongreen/40 font-orbitron font-bold text-[10px] flex items-center gap-1 active:scale-95 transition-transform" title="AI Security Shield Active">
+                <i class="fa-solid fa-shield-halved animate-pulse"></i> <span class="hidden md:inline">SHIELD</span>
+            </button>
+
+            <!-- VIP Pass Badge -->
+            <button onclick="toggleModal('vipPassModal')" class="px-2.5 py-1.5 rounded-xl bg-gradient-to-r from-vipgold to-neonpink text-black font-orbitron font-extrabold text-[10px] neon-glow-gold flex items-center gap-1.5 active:scale-95 transition-transform">
+                <i class="fa-solid fa-crown"></i> <span id="vipBadgeText">VIP</span>
+            </button>
+
+            <!-- Master Features Hub Icon (Two-Box Center) -->
+            <button onclick="toggleMasterHub()" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neoncyan hover:bg-neoncyan/20 neon-glow-cyan transition-all relative group" title="Master 100+ Hub">
+                <i class="fa-solid fa-grid-2 text-sm group-hover:rotate-90 transition-transform duration-300"></i>
+                <span class="absolute -bottom-1 -right-1 w-3 h-3 bg-neongreen rounded-full border-2 border-cyberdark"></span>
+            </button>
+
+            <!-- Dark/Light Mode Toggle -->
+            <button onclick="toggleThemeMode()" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-yellow-400 hover:bg-yellow-400/20 transition-all" title="Toggle Theme">
+                <i id="themeIcon" class="fa-solid fa-sun text-xs"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Universal Search Bar -->
+    <div class="px-4 pt-16 pb-2 sm:hidden">
+        <div class="relative">
+            <input type="text" placeholder="Universal Search (YouTube, OTT, Reels)..." class="w-full bg-cyberdark/90 text-xs text-white placeholder-cyan-400/50 px-4 py-2.5 rounded-xl border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-3.5 top-3 text-neoncyan text-xs"></i>
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN APP VIEWS CONTAINER (5 TABS) ================= -->
+    <main class="flex-1 px-4 pt-2 max-w-7xl mx-auto w-full">
+
+        <!-- ================= TAB 1: HOME FEED ================= -->
+        <div id="tab-home" class="space-y-6 tab-content">
+            
+            <!-- Soft & Helpful AI Guide Assistant -->
+            <section class="rounded-2xl glass-panel p-4 border border-neonpurple/40 neon-glow-purple relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="absolute -left-10 -top-10 w-32 h-32 bg-neonpurple/20 rounded-full blur-2xl pointer-events-none"></div>
+                <div class="flex items-center gap-3.5">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-neonpurple to-neonpink p-0.5 flex-shrink-0 neon-glow-pink">
+                        <div class="w-full h-full bg-cyberdark rounded-[14px] flex items-center justify-center text-neonpink text-xl">
+                            <i class="fa-solid fa-robot animate-bounce"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-0.5">
+                        <div class="flex items-center gap-2">
+                            <h3 class="font-orbitron font-bold text-sm text-white">MStram Gentle AI Guide</h3>
+                            <span class="px-1.5 py-0.2 rounded bg-neongreen/20 text-neongreen text-[9px] font-orbitron">Friendly Assistant</span>
+                        </div>
+                        <p id="aiGuideText" class="text-xs text-gray-300">"नमस्ते Sajeel! AI Challenge Arena और GitHub Pages रेडी थंबनेल फीड एक्टिव हैं।"</p>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="triggerAiAssistantAudio()" class="px-3 py-2 rounded-xl glass-panel text-neoncyan font-orbitron text-xs hover:bg-neoncyan/20 transition-all whitespace-nowrap">
+                        <i class="fa-solid fa-volume-high mr-1"></i> Speak Guide
+                    </button>
+                    <button onclick="toggleMasterHub()" class="px-3 py-2 rounded-xl bg-gradient-to-r from-neoncyan to-neonpurple text-cyberdark font-orbitron font-bold text-xs hover:neon-glow-cyan transition-all whitespace-nowrap">
+                        <i class="fa-solid fa-gamepad mr-1"></i> AI Challenge Arena
+                    </button>
+                </div>
+            </section>
+
+            <!-- Top Commercial Ad Poster -->
+            <section class="relative rounded-2xl overflow-hidden glass-panel p-5 border border-neoncyan/40 neon-glow-cyan group">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-neoncyan/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="space-y-1.5">
+                        <span class="px-2 py-0.5 bg-neongreen/20 text-neongreen border border-neongreen/40 rounded text-[10px] font-orbitron font-bold uppercase">MStram Zero-Cost Architecture</span>
+                        <h2 class="font-orbitron font-bold text-lg sm:text-xl text-white">MStram Quantum Monetization & GitHub Ready Hub</h2>
+                        <p class="text-xs text-gray-300 max-w-xl">Watch-to-Earn rewards, AI Challenge Arena, and verified high-res image thumbnails.</p>
+                    </div>
+                    <button onclick="openMasterHub()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-neoncyan to-neonpurple text-cyberdark font-orbitron font-bold text-xs hover:neon-glow-cyan transition-all active:scale-95 whitespace-nowrap">
+                        <i class="fa-solid fa-trophy mr-1.5"></i> Open AI Challenge Arena
+                    </button>
+                </div>
+            </section>
+
+            <!-- Shorts Horizontal Scroll Row (With Real Working Thumbnails) -->
+            <section class="space-y-3">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-orbitron font-bold text-sm text-white flex items-center gap-2">
+                        <i class="fa-solid fa-bolt-lightning text-neonpink"></i> MStram Quantum Shorts & Reels Feed
+                    </h3>
+                    <span class="text-xs text-neoncyan cursor-pointer hover:underline" onclick="switchTab('shorts')">View All</span>
+                </div>
+
+                <div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+                    <div onclick="openInAppPlayer('dQw4w9WgXcQ', 'Secret of Ancient Homo Longi in 2050', 'MStram Official')" class="min-w-[130px] sm:min-w-[150px] h-[220px] rounded-xl glass-panel relative overflow-hidden group cursor-pointer border border-neonpink/30 hover:neon-glow-pink transition-all">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Thumbnail">
+                        <div class="absolute top-2 left-2 z-20 bg-black/70 backdrop-blur-md px-1.5 py-0.5 rounded text-[8px] font-orbitron mstram-logo-gradient font-bold">MStram Pro</div>
+                        <div class="absolute top-2 right-2 z-20 bg-black/60 backdrop-blur-md px-1.5 py-0.5 rounded text-[9px] font-orbitron text-neonpink"><i class="fa-solid fa-play text-[8px]"></i> 1.2M</div>
+                        <div class="absolute bottom-2 left-2 right-2 z-20">
+                            <span class="text-[9px] text-neoncyan block font-orbitron">#MStramAI</span>
+                            <p class="text-xs font-semibold text-white line-clamp-2 leading-tight">Secret of Ancient Homo Longi</p>
+                        </div>
+                    </div>
+                    <div onclick="openInAppPlayer('3JZ_D3ELwOQ', 'PK Bhai vs Cyber King in Neon Arena', 'MStram Gaming')" class="min-w-[130px] sm:min-w-[150px] h-[220px] rounded-xl glass-panel relative overflow-hidden group cursor-pointer border border-neoncyan/30 hover:neon-glow-cyan transition-all">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=400&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Thumbnail">
+                        <div class="absolute top-2 left-2 z-20 bg-black/70 backdrop-blur-md px-1.5 py-0.5 rounded text-[8px] font-orbitron mstram-logo-gradient font-bold">MStram Pro</div>
+                        <div class="absolute top-2 right-2 z-20 bg-black/60 backdrop-blur-md px-1.5 py-0.5 rounded text-[9px] font-orbitron text-neoncyan"><i class="fa-solid fa-play text-[8px]"></i> 850K</div>
+                        <div class="absolute bottom-2 left-2 right-2 z-20">
+                            <span class="text-[9px] text-neonpink block font-orbitron">#PKBhai</span>
+                            <p class="text-xs font-semibold text-white line-clamp-2 leading-tight">PK Bhai vs Cyber King</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Long Video Feed with Real Working Thumbnails & Red Progress Line -->
+            <section class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-orbitron font-bold text-sm text-white flex items-center gap-2">
+                        <i class="fa-solid fa-cubes text-neoncyan"></i> MStram Quantum Streams & Long Videos
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Video Card 1 -->
+                    <div class="glass-panel rounded-2xl overflow-hidden border border-neoncyan/25 hover:border-neoncyan/70 transition-all group cursor-pointer flex flex-col justify-between" onclick="openInAppPlayer('dQw4w9WgXcQ', 'MStram Official: The Rise of Homo Longi & Ancient Giants in 2050', 'MStram Official')">
+                        <div>
+                            <div class="relative aspect-video bg-cyberdark overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Thumbnail">
+                                <div class="absolute top-2 left-2 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-orbitron mstram-logo-gradient font-bold">MStram 4K</div>
+                                <div class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-orbitron text-neoncyan">24:15</div>
+                                
+                                <!-- Red Progress Line -->
+                                <div class="absolute bottom-0 inset-x-0 h-1.5 bg-gray-700/80">
+                                    <div class="h-full bg-dangerred w-[65%]"></div>
+                                </div>
+                            </div>
+                            <div class="p-3.5 space-y-2">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-gradient-to-r from-neoncyan to-neonpurple p-0.5 flex-shrink-0">
+                                        <div class="w-full h-full bg-cyberdark rounded-full flex items-center justify-center font-orbitron font-bold text-xs text-neoncyan">MS</div>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-xs text-white line-clamp-2 leading-snug group-hover:text-neoncyan transition-colors">MStram Official: The Rise of Homo Longi & Ancient Giants in 2050</h4>
+                                        <p class="text-[11px] text-gray-400 mt-0.5">MStram Official • 52 views • 2 hours ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mx-3.5 mb-3.5 p-2 rounded-xl bg-neoncyan/10 border border-neoncyan/30 flex items-center justify-between text-[11px]">
+                            <span class="text-neoncyan font-orbitron"><i class="fa-solid fa-rectangle-ad"></i> MStram Sponsored Ad</span>
+                            <span class="text-neongreen font-bold">Watch-to-Earn Active</span>
+                        </div>
+                    </div>
+
+                    <!-- Video Card 2 -->
+                    <div class="glass-panel rounded-2xl overflow-hidden border border-neonpurple/25 hover:border-neonpurple/70 transition-all group cursor-pointer flex flex-col justify-between" onclick="openInAppPlayer('3JZ_D3ELwOQ', 'MStram Gaming: PK Bhai & The Cyber King Showdown in Karachi', 'MStram Gaming')">
+                        <div>
+                            <div class="relative aspect-video bg-cyberdark overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Thumbnail">
+                                <div class="absolute top-2 left-2 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-orbitron mstram-logo-gradient font-bold">MStram 4K</div>
+                                <div class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-orbitron text-neonpurple">12:40</div>
+                                
+                                <div class="absolute bottom-0 inset-x-0 h-1.5 bg-gray-700/80">
+                                    <div class="h-full bg-dangerred w-[30%]"></div>
+                                </div>
+                            </div>
+                            <div class="p-3.5 space-y-2">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-gradient-to-r from-neonpurple to-neonpink p-0.5 flex-shrink-0">
+                                        <div class="w-full h-full bg-cyberdark rounded-full flex items-center justify-center font-orbitron font-bold text-xs text-neonpink">MS</div>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-xs text-white line-clamp-2 leading-snug group-hover:text-neonpurple transition-colors">MStram Gaming: PK Bhai & The Cyber King Showdown in Karachi</h4>
+                                        <p class="text-[11px] text-gray-400 mt-0.5">MStram Gaming • 1.4K views • 5 hours ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mx-3.5 mb-3.5 p-2 rounded-xl bg-neonpurple/10 border border-neonpurple/30 flex items-center justify-between text-[11px]">
+                            <span class="text-neonpurple font-orbitron"><i class="fa-solid fa-rectangle-ad"></i> MStram Sponsored Ad</span>
+                            <span class="text-neongreen font-bold">Watch-to-Earn Active</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- ================= TAB 2: SHORTS & REELS VIEWER ================= -->
+        <div id="tab-shorts" class="hidden tab-content space-y-4">
+            <div class="max-w-md mx-auto h-[74vh] glass-panel rounded-3xl relative overflow-hidden flex flex-col justify-between p-4 border border-neonpink/40 neon-glow-pink">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop')] bg-cover bg-center -z-10 opacity-70"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 -z-10"></div>
+                
+                <div id="shortsTrendingBar" class="bg-black/80 backdrop-blur-md rounded-xl p-2.5 flex items-center justify-between text-[11px] font-orbitron border border-neonpink/30">
+                    <span class="text-neonpink"><i class="fa-solid fa-fire"></i> MStram Trending Audio / Live Stream</span>
+                    <button onclick="alert('Switching to MStram Live Stream Audio feed...')" class="px-2 py-1 rounded bg-neonpink text-white text-[10px]">Join Live</button>
+                </div>
+
+                <div class="absolute right-4 bottom-24 flex flex-col items-center gap-4">
+                    <button onclick="this.classList.toggle('text-neonpink');" class="flex flex-col items-center text-white">
+                        <div class="w-10 h-10 rounded-full glass-panel flex items-center justify-center mb-1 text-neonpink"><i class="fa-solid fa-heart text-sm"></i></div>
+                        <span class="text-[10px] font-orbitron">48.2K</span>
+                    </button>
+                </div>
+
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-neoncyan/20 border border-neoncyan flex items-center justify-center font-orbitron text-xs text-neoncyan">MS</div>
+                        <span class="font-orbitron font-bold text-xs text-white">MStram Autonomous Short Feed</span>
+                        <button onclick="alert('Subscribed to MStram Network!')" class="px-2.5 py-0.5 rounded-full bg-neoncyan text-cyberdark text-[10px] font-orbitron font-bold">Follow</button>
+                    </div>
+                    <p class="text-xs text-gray-200 line-clamp-2">Powered by MStram 2050 Autonomous AI Content Machine! #MStram #Reels #TikTok</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ================= TAB 3: CREATE / UPLOAD ================= -->
+        <!-- Accessed via bottom center upload button -->
+
+
+        <!-- ================= TAB 4: SUBSCRIPTIONS ================= -->
+        <div id="tab-subscriptions" class="hidden tab-content space-y-4">
+            <h2 class="font-orbitron font-bold text-base text-white flex items-center gap-2">
+                <i class="fa-solid fa-satellite-dish text-neoncyan"></i> MStram Subscribed Quantum Networks ('All' Notifications)
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="glass-panel p-4 rounded-2xl flex items-center justify-between border border-neoncyan/20">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-neoncyan to-neonpurple p-0.5">
+                            <div class="w-full h-full bg-cyberdark rounded-[10px] flex items-center justify-center font-orbitron font-bold text-neoncyan">MS</div>
+                        </div>
+                        <div>
+                            <h4 class="font-orbitron font-bold text-sm text-white">MStram Official</h4>
+                            <p class="text-xs text-gray-400">12.4M Subscribers • 3 new videos</p>
+                        </div>
+                    </div>
+                    <span class="px-2.5 py-1 rounded-xl bg-neongreen/20 text-neongreen text-xs font-orbitron"><i class="fa-solid fa-bell"></i> All</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ================= TAB 5: PROFILE / YOU HUB / WALLET ================= -->
+        <div id="tab-profile" class="hidden tab-content space-y-5">
+            <div class="glass-panel p-5 rounded-3xl relative overflow-hidden border border-neoncyan/30 neon-glow-cyan space-y-4">
+                <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+                    <div class="relative">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-neoncyan via-neonpurple to-neonpink p-1">
+                            <div class="w-full h-full bg-cyberdark rounded-xl flex items-center justify-center font-orbitron font-extrabold text-2xl text-neoncyan">SJ</div>
+                        </div>
+                        <button onclick="toggleModal('editChannelModal')" class="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-neoncyan text-cyberdark flex items-center justify-center text-xs shadow-lg" title="Edit Channel">
+                            <i class="fa-solid fa-pencil"></i>
+                        </button>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex items-center justify-center sm:justify-start gap-2">
+                            <h2 id="profileChannelName" class="font-orbitron font-bold text-lg text-white">Sajeel Creator Hub</h2>
+                            <span class="px-2 py-0.5 rounded-full bg-gradient-to-r from-vipgold to-neonpink text-black font-orbitron font-extrabold text-[9px] neon-glow-gold flex items-center gap-1">
+                                <i class="fa-solid fa-crown"></i> CYBER LEGEND
+                            </span>
+                        </div>
+                        <p class="text-xs text-gray-300">@SajeelMStram2050 • Karachi, Pakistan • Streak: 🔥 14 Days</p>
+                        <div class="flex items-center justify-center sm:justify-start gap-3 pt-1 text-xs font-orbitron">
+                            <span class="text-neongreen"><i class="fa-solid fa-wallet"></i> Watch-to-Earn: <span id="viewerWalletBalance">$142.50</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-3 border-t border-white/10">
+                    <button onclick="toggleModal('downloadsModal')" class="p-2.5 rounded-xl glass-panel text-neoncyan font-orbitron text-xs flex items-center justify-center gap-2 hover:bg-neoncyan/20">
+                        <i class="fa-solid fa-download"></i> Downloads
+                    </button>
+                    <button onclick="toggleModal('analyticsModal')" class="p-2.5 rounded-xl glass-panel text-neonpurple font-orbitron text-xs flex items-center justify-center gap-2 hover:bg-neonpurple/20">
+                        <i class="fa-solid fa-chart-line"></i> Analytics
+                    </button>
+                    <button onclick="toggleModal('withdrawalModal')" class="p-2.5 rounded-xl glass-panel text-neongreen font-orbitron text-xs flex items-center justify-center gap-2 hover:bg-neongreen/20">
+                        <i class="fa-solid fa-money-bill-transfer"></i> Withdraw
+                    </button>
+                    <button onclick="toggleMasterHub()" class="p-2.5 rounded-xl bg-gradient-to-r from-neoncyan to-neonpurple text-cyberdark font-orbitron font-bold text-xs flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-trophy"></i> AI Arena
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- ================= 5 FIXED ICONS BOTTOM NAVIGATION BAR ================= -->
+    <nav class="glass-nav fixed bottom-0 left-0 right-0 z-40 px-4 py-2 flex items-center justify-around">
+        <button onclick="switchTab('home')" id="nav-home" class="flex flex-col items-center gap-0.5 text-neoncyan transition-all group">
+            <i class="fa-solid fa-house text-lg group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-orbitron font-semibold">Home</span>
+        </button>
+        <button onclick="switchTab('shorts')" id="nav-shorts" class="flex flex-col items-center gap-0.5 text-gray-400 hover:text-neonpink transition-all group">
+            <i class="fa-solid fa-bolt text-lg group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-orbitron font-semibold">Shorts</span>
+        </button>
+        <button onclick="toggleModal('uploadMenuModal')" class="relative -top-3 w-14 h-14 rounded-2xl bg-gradient-to-tr from-neoncyan via-neonpurple to-neonpink p-0.5 neon-glow-cyan group active:scale-95 transition-transform" title="Upload & Create Menu">
+            <div class="w-full h-full bg-cyberdark rounded-[14px] flex items-center justify-center text-white group-hover:bg-transparent transition-colors">
+                <i class="fa-solid fa-plus text-xl text-neoncyan group-hover:text-black transition-colors"></i>
+            </div>
+        </button>
+        <button onclick="switchTab('subscriptions')" id="nav-subscriptions" class="flex flex-col items-center gap-0.5 text-gray-400 hover:text-neoncyan transition-all group">
+            <i class="fa-solid fa-satellite-dish text-lg group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-orbitron font-semibold">Subs</span>
+        </button>
+        <button onclick="switchTab('profile')" id="nav-profile" class="flex flex-col items-center gap-0.5 text-gray-400 hover:text-neongreen transition-all group">
+            <i class="fa-solid fa-user text-lg group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-orbitron font-semibold">You</span>
+        </button>
+    </nav>
+
+
+    <!-- ================= FLOATING AI CHAT ASSISTANT ================= -->
+    <div class="fixed bottom-20 right-4 z-50">
+        <button onclick="toggleModal('aiChatModal')" class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-neonpurple to-neonpink text-white flex items-center justify-center text-xl neon-glow-pink hover:scale-110 transition-transform shadow-2xl" title="Floating Gentle AI Chat">
+            <i class="fa-solid fa-robot"></i>
+        </button>
+    </div>
+
+
+    <!-- ================= MASTER HUB / AI CHALLENGE ARENA MODAL ================= -->
+    <div id="masterHubModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-2xl hidden flex items-center justify-center p-3 sm:p-6">
+        <div class="glass-panel w-full max-w-4xl max-h-[92vh] rounded-3xl p-6 border border-neoncyan/50 neon-glow-cyan flex flex-col overflow-hidden">
+            <div class="flex items-center justify-between pb-4 border-b border-neoncyan/20">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-10 h-10 rounded-xl bg-neoncyan/20 flex items-center justify-center text-neoncyan text-lg">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-orbitron font-extrabold text-base sm:text-lg text-white">MStram AI Challenge Arena & Creator Hub</h3>
+                        <p class="text-[11px] text-gray-300">Play Games, Win Dollars, or Watch 3 Sponsored Ads for Free Entry</p>
+                    </div>
+                </div>
+                <button onclick="toggleMasterHub()" class="w-9 h-9 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-sm"></i></button>
+            </div>
+            
+            <div class="flex-1 overflow-y-auto py-4 space-y-6 pr-2 text-xs">
+                <div class="glass-panel p-5 rounded-2xl border border-neongreen/40
+<!DOCTYPE html>
+<html lang="hi" class="dark" id="htmlRoot">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MStram Pro - 2050 Immortal Creator Ecosystem & Master Business Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyberdark: '#05050a',
+                        glassdark: 'rgba(13, 13, 26, 0.8)',
+                        neoncyan: '#00f0ff',
+                        neonpurple: '#9d00ff',
+                        neonpink: '#ff007f',
+                        neongreen: '#00ff66',
+                        vipgold: '#ffd700',
+                        dangerred: '#ff0033'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        body.dark {
+            background-color: #05050a;
+            color: #e2e8f0;
+        }
+        body.light {
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        body.dark .glass-panel {
+            background: rgba(18, 18, 38, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+        }
+        body.light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 150, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        body.dark .glass-header {
+            background: rgba(5, 5, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(157, 0, 255, 0.2);
+        }
+        body.light .glass-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        body.dark .glass-nav {
+            background: rgba(8, 8, 20, 0.85);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 240, 255, 0.2);
+        }
+        body.light .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 20px rgba(157, 0, 255, 0.4);
+        }
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+        }
+        .neon-glow-gold {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        .mstram-logo-gradient {
+            background: linear-gradient(135deg, #00f0ff, #ff007f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="dark min-h-screen flex flex-col pb-24 selection:bg-neoncyan selection:text-black" id="bodyElement">
+
+    <!-- ================= TOP HEADER, BRANDING, SEARCH, NOTIFICATION BELL & MASTER HUB ================= -->
+    <header class="glass-header fixed top-0 left-0 right-0 z-50 px-4 py-3 flex items-center justify-between gap-3">
+        <!-- Universal MStram Branding & Cyberpunk Logo -->
+        <div class="flex items-center gap-2.5 cursor-pointer" onclick="switchTab('home')">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-neoncyan via-neonpurple to-neonpink p-0.5 neon-glow-cyan flex items-center justify-center">
+                <div class="w-full h-full bg-cyberdark rounded-[10px] flex items-center justify-center">
+                    <i class="fa-solid fa-cube text-neoncyan text-lg animate-pulse"></i>
+                </div>
+            </div>
+            <div>
+                <h1 class="font-orbitron font-extrabold text-lg tracking-wider mstram-logo-gradient">MStram</h1>
+                <span class="text-[10px] font-orbitron text-neongreen tracking-widest block -mt-1">PRO 2050 HUB</span>
+            </div>
+        </div>
+
+        <!-- Universal Search Bar -->
+        <div class="flex-1 max-w-md relative hidden sm:block">
+            <input type="text" id="universalSearchInput" placeholder="Universal Search (YouTube, OTT, TikTok, Reels, Rare Movies)..." class="w-full bg-cyberdark/80 text-xs text-white placeholder-cyan-400/50 px-4 py-2 rounded-full border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-4 top-2.5 text-neoncyan text-xs"></i>
+        </div>
+
+        <!-- Right Action Icons: Notification Bell, Security, Master Hub, VIP, Dark/Light -->
+        <div class="flex items-center gap-2">
+            <!-- Notification Bell with Red Dot & Count Badge -->
+            <button onclick="toggleModal('notificationsModal')" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neonpink hover:bg-neonpink/20 transition-all relative" title="Notifications">
+                <i class="fa-solid fa-bell text-sm"></i>
+                <span class="absolute -top-1 -right-1 w-4 h-4 bg-dangerred text-white text-[9px] font-orbitron font-bold rounded-full flex items-center justify-center border border-cyberdark animate-bounce">3</span>
+            </button>
+
+            <!-- AI Security Status -->
+            <button onclick="openSecurityDashboard()" class="px-2 py-1.5 rounded-xl bg-neongreen/20 text-neongreen border border-neongreen/40 font-orbitron font-bold text-[10px] flex items-center gap-1 active:scale-95 transition-transform" title="AI Security Shield Active">
+                <i class="fa-solid fa-shield-halved animate-pulse"></i> <span class="hidden md:inline">SHIELD</span>
+            </button>
+
+            <!-- VIP Pass Badge -->
+            <button onclick="toggleModal('vipPassModal')" class="px-2.5 py-1.5 rounded-xl bg-gradient-to-r from-vipgold to-neonpink text-black font-orbitron font-extrabold text-[10px] neon-glow-gold flex items-center gap-1.5 active:scale-95 transition-transform">
+                <i class="fa-solid fa-crown"></i> <span id="vipBadgeText">VIP</span>
+            </button>
+
+            <!-- Master Features Hub Icon (Two-Box Center) -->
+            <button onclick="toggleMasterHub()" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neoncyan hover:bg-neoncyan/20 neon-glow-cyan transition-all relative group" title="Master 100+ Hub">
+                <i class="fa-solid fa-grid-2 text-sm group-hover:rotate-90 transition-transform duration-300"></i>
+                <span class="absolute -bottom-1 -right-1 w-3 h-3 bg-neongreen rounded-full border-2 border-cyberdark"></span>
+            </button>
+
+            <!-- Dark/Light Mode Toggle -->
+            <button onclick="toggleThemeMode()" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-yellow-400 hover:bg-yellow-400/20 transition-all" title="Toggle Theme">
+                <i id="themeIcon" class="fa-solid fa-sun text-xs"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Universal Search Bar -->
+    <div class="px-4 pt-16 pb-2 sm:hidden">
+        <div class="relative">
+            <input type="text" placeholder="Universal Search (YouTube, OTT, Reels)..." class="w-full bg-cyberdark/90 text-xs text-white placeholder-cyan-400/50 px-4 py-2.5 rounded-xl border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-3.5 top-3 text-neoncyan text-xs"></i>
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN APP VIEWS CONTAINER (5 TABS) ================= -->
+    <main class="flex-1 px-4 pt-2 max-w-7xl mx-auto w-full">
+
+        <!-- ================= TAB 1: HOME FEED ================= -->
+        <div id="tab-home" class="space-y-6 tab-content">
+            
+            <!-- Soft & Helpful AI Guide Assistant -->
+            <section class="rounded-2xl glass-panel p-4 border border-neonpurple/40 neon-glow-purple relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="absolute -left-10 -top-10 w-32 h-32 bg-neonpurple/20 rounded-full blur-2xl pointer-events-none"></div>
+                <div class="flex items-center gap-3.5">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-neonpurple to-neonpink p-0.5 flex-shrink-0 neon-glow-pink">
+                        <div class="w-full h-full bg-cyberdark rounded-[14px] flex items-center justify-center text-neonpink text-xl">
+                            <i class="fa-solid fa-robot animate-bounce"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-0.5">
+                        <div class="flex items-center gap-2">
+                            <h3 class="font-orbitron font-bold text-sm text-white">MStram Gentle AI Guide</h3>
+                            <span class="px-1.5 py-0.2 rounded bg-neongreen/20 text-neongreen text-[9px] font-orbitron">Friendly Assistant</span>
+                        </div>
+                        <p id="aiGuideText" class="text-xs text-gray-300">"नमस्ते Sajeel! Master Hub के अंदर सभी 5 बिजनेस और GitHub Pages रेडी थंबनेल फीड एक्टिव हैं।"</p>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="triggerAiAssistantAudio()" class="px-3 py-2 rounded-xl glass-panel text-neoncyan font-orbitron text-xs hover:bg-neoncyan/20 transition-all whitespace-nowrap">
+                        <i class="fa-solid fa-volume-high mr-1"></i> Speak Guide
+                    </button>
+                    <button onclick="toggleMasterHub()" class="px-3 py-2 rounded-xl bg-gradient-to-r from-neoncyan to-neonpurple text-cyberdark font-orbitron font-bold text-xs hover:neon-glow-cyan transition-all whitespace-nowrap">
+                        <i class="fa-solid fa-store mr-1"></i> Master Business Hub
+                    </button>
+                </div>
+            </section>
+
+            <!-- Top Commercial Ad Poster -->
+            <section class="relative rounded-2xl overflow-hidden glass-panel p-5 border border-neoncyan/40 neon-glow-cyan group">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-neoncyan/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="space-y-1.5">
+                        <span class="px-2 py-0.5 bg-neongreen/20 text-neongreen border border-neongreen/40 rounded text-[10px] font-orbitron font-bold uppercase">MStram Zero-Cost Architecture</span>
+                        <h2 class="font-orbitron font-bold text-lg sm:text-xl text-white">MStram Master Business Ecosystem</h2>
+                        <p class="text-xs text-gray-300 max-w-xl">Bazaar storefronts, flash promo hype boost, esports tournaments, affiliate gear, and brand partnerships.</p>
+                    </div>
+                    <button onclick="toggleMasterHub()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-neoncyan to-neonpurple text-cyberdark font-orbitron font-bold text-xs hover:neon-glow-cyan transition-all active:scale-95 whitespace-nowrap">
+                        <i class="fa-solid fa-store mr-1.5"></i> Open Master Hub
+                    </button>
+                </div>
+            </section>
+
+            <!-- Shorts Horizontal Scroll Row (With Real Working Thumbnails) -->
+            <section class="space-y-3">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-orbitron font-bold text-sm text-white flex items-center gap-2">
+                        <i class="fa-solid fa-bolt-lightning text-neonpink"></i> MStram Quantum Shorts & Reels Feed
+                    </h3>
+                    <span class="text-xs text-neoncyan cursor-pointer hover:underline" onclick="switchTab('shorts')">View All</span>
+                </div>
+
+                <div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+                    <div onclick="openInAppPlayer('dQw4w9WgXcQ', 'Secret of Ancient Homo Longi in 2050
+<!DOCTYPE html>
+<html lang="hi" class="dark" id="htmlRoot">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MStram Pro - 2050 Immortal Creator Ecosystem & 100-Layer Security Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyberdark: '#05050a',
+                        glassdark: 'rgba(13, 13, 26, 0.8)',
+                        neoncyan: '#00f0ff',
+                        neonpurple: '#9d00ff',
+                        neonpink: '#ff007f',
+                        neongreen: '#00ff66',
+                        vipgold: '#ffd700',
+                        dangerred: '#ff0033'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        body.dark {
+            background-color: #05050a;
+            color: #e2e8f0;
+        }
+        body.light {
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        body.dark .glass-panel {
+            background: rgba(18, 18, 38, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+        }
+        body.light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 150, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        body.dark .glass-header {
+            background: rgba(5, 5, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(157, 0, 255, 0.2);
+        }
+        body.light .glass-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        body.dark .glass-nav {
+            background: rgba(8, 8, 20, 0.85);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 240, 255, 0.2);
+        }
+        body.light .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 20px rgba(157, 0, 255, 0.4);
+        }
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+        }
+        .neon-glow-gold {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        .mstram-logo-gradient {
+            background: linear-gradient(135deg, #00f0ff, #ff007f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="dark min-h-screen flex flex-col pb-24 selection:bg-neoncyan selection:text-black" id="bodyElement">
+
+    <!-- ================= TOP HEADER, BRANDING, SEARCH, NOTIFICATION BELL & MASTER HUB ================= -->
+    <header class="glass-header fixed top-0 left-0 right-0 z-50 px-4 py-3 flex items-center justify-between gap-3">
+        <!-- Universal MStram Branding & Cyberpunk Logo -->
+        <div class="flex items-center gap-2.5 cursor-pointer" onclick="switchTab('home')">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-neoncyan via-neonpurple to-neonpink p-0.5 neon-glow-cyan flex items-center justify-center">
+                <div class="w-full h-full bg-cyberdark rounded-[10px] flex items-center justify-center">
+                    <i class="fa-solid fa-cube text-neoncyan text-lg animate-pulse"></i>
+                </div>
+            </div>
+            <div>
+                <h1 class="font-orbitron font-extrabold text-lg tracking-wider mstram-logo-gradient">MStram</h1>
+                <span class="text-[10px] font-orbitron text-neongreen tracking-widest block -mt-1">PRO 2050 HUB</span>
+            </div>
+        </div>
+
+        <!-- Universal Search Bar -->
+        <div class="flex-1 max-w-md relative hidden sm:block">
+            <input type="text" id="universalSearchInput" placeholder="Universal Search (YouTube, OTT, TikTok, Reels, Rare Movies)..." class="w-full bg-cyberdark/80 text-xs text-white placeholder-cyan-400/50 px-4 py-2 rounded-full border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-4 top-2.5 text-neoncyan text-xs"></i>
+        </div>
+
+        <!-- Right Action Icons: Notification Bell, Security, Master Hub, VIP, Dark/Light -->
+        <div class="flex items-center gap-2">
+            <!-- Notification Bell with Red Dot & Count Badge -->
+            <button onclick="toggleModal('notificationsModal')" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neonpink hover:bg-neonpink/20 transition-all relative" title="Notifications">
+                <i class="fa-solid fa-bell text-sm"></i>
+                <span class="absolute -top-1 -right-1 w-4 h-4 bg-dangerred text-white text-[9px] font-orbitron font-bold rounded-full flex items-center justify-center border border-cyberdark animate-bounce">3</span>
+            </button>
+
+            <!-- 100-Layer Security Status -->
+            <button onclick="openSecurityDashboard()" class="px-2 py-1.5 rounded-xl bg-neongreen/20 text-neongreen border border-neongreen/40 font-orbitron font-bold text-[10px] flex items-center gap-1 active:scale-95 transition-transform" title="100-Layer Security Active">
+                <i class="fa-solid fa-shield-halved animate-pulse"></i> <span class="hidden md:inline">100-SEC</span>
+            </button>
+
+            <!-- VIP Pass Badge -->
+            <button onclick="toggleModal('vipPassModal')" class="px-2.5 py-1.5 rounded-xl bg
+<!DOCTYPE html>
+<html lang="hi" class="dark" id="htmlRoot">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MStram Pro - Chief AI Guide Ecosystem & 2050 Cyber Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyberdark: '#05050a',
+                        glassdark: 'rgba(13, 13, 26, 0.8)',
+                        neoncyan: '#00f0ff',
+                        neonpurple: '#9d00ff',
+                        neonpink: '#ff007f',
+                        neongreen: '#00ff66',
+                        vipgold: '#ffd700',
+                        dangerred: '#ff0033'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        body.dark {
+            background-color: #05050a;
+            color: #e2e8f0;
+        }
+        body.light {
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        body.dark .glass-panel {
+            background: rgba(18, 18, 38, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+        }
+        body.light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 150, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        body.dark .glass-header {
+            background: rgba(5, 5, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(157, 0, 255, 0.2);
+        }
+        body.light .glass-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        body.dark .glass-nav {
+            background: rgba(8, 8, 20, 0.85);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 240, 255, 0.2);
+        }
+        body.light .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 20px rgba(157, 0, 255, 0.4);
+        }
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+        }
+        .neon-glow-gold {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        .mstram-logo-gradient {
+            background: linear-gradient(135deg, #00f0ff, #ff007f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="dark min-h-screen flex flex-col pb-24 selection:bg-neoncyan selection:text-black" id="bodyElement">
+
+    <!-- ================= TOP HEADER, BRANDING, SEARCH, NOTIFICATION BELL & MASTER HUB ================= -->
+    <header class="glass-header fixed top-0 left-0 right-0 z-50 px-4 py-3 flex items-center justify-between gap-3">
+        <!-- Universal MStram Branding & Cyberpunk Logo -->
+        <div class="flex items-center gap-2.5 cursor-pointer" onclick="switchTab('home')">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-neoncyan via-neonpurple to-neonpink p-0.5 neon-glow-cyan flex items-center justify-center">
+                <div class="w-full h-full bg-cyberdark rounded-[10px] flex items-center justify-center">
+                    <i class="fa-solid fa-cube text-neoncyan text-lg animate-pulse"></i>
+                </div>
+            </div>
+            <div>
+                <h1 class="font-orbitron font-extrabold text-lg tracking-wider mstram-logo-gradient">MStram</h1>
+                <span class="text-[10px] font-orbitron text-neongreen tracking-widest block -mt-1">CHIEF AI GUIDE HUB</span>
+            </div>
+        </div>
+
+        <!-- Universal Search Bar -->
+        <div class="flex-1 max-w-md relative hidden sm:block">
+            <input type="text" id="universalSearchInput" placeholder="Universal Search (YouTube, OTT, TikTok, Reels, Rare Movies)..." class="w-full bg-cyberdark/80 text-xs text-white placeholder-cyan-400/50 px-4 py-2 rounded-full border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-4 top-2.5 text-neoncyan text-xs"></i>
+        </div>
+
+        <!-- Right Action Icons: Notification Bell, Security, Master Hub, VIP, Dark/Light -->
+        <div class="flex items-center gap-2">
+            <!-- Notification Bell with Red Dot & Count Badge -->
+            <button onclick="toggleModal('notificationsModal')" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neonpink hover:bg-neonpink/20 transition-all relative" title="Notifications">
+                <i class="fa-solid fa-bell text-sm"></i>
+                <span class="absolute -top-1 -right-1 w-4 h-4 bg-dangerred text-white text-[9px] font-orbitron font-bold rounded-full flex items-center justify-center border border-cyberdark animate-bounce">3</span>
+            </button>
+
+            <!-- Anti-Spam Bot Shield Status -->
+            <button onclick="openSecurityDashboard()" class="px-2 py-1.5 rounded-xl bg-neongreen/20 text-neongreen border border-neongreen/40 font-orbitron font-bold text-[10px] flex items-center gap-1 active:scale-95 transition-transform" title="Anti-Spam & Bot Shield Active">
+                <i class="fa-solid fa-shield-cat animate-pulse"></i> <span class="hidden md:inline">ANTI-BOT</span>
+            </button>
+
+            <!-- VIP Pass Badge -->
+            <button onclick="toggleModal('vipPassModal')" class="px-2.5 py-1.5 rounded-xl bg-gradient-to-r from-vipgold to-neonpink text-black font-orbitron font-extrabold text-[10px] neon-glow-gold flex items-center gap-1.5 active:scale-95 transition-transform">
+                <i class="fa-solid fa-crown"></i> <span id="vipBadgeText">VIP</span>
+            </button>
+
+            <!-- Master Features Hub Icon -->
+            <button onclick="toggleMasterHub()" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neoncyan hover:bg-neoncyan/20 neon-glow-cyan transition-all relative group" title="Master 100+ Hub">
+                <i class="fa-solid fa-grid-2 text-sm group-hover:rotate-90 transition-transform duration-300"></i>
+                <span class="absolute -bottom-1 -right-1 w-3 h-3 bg-neongreen rounded-full border-2 border-cyberdark"></span>
+            </button>
+
+            <!-- Dark/Light Mode Toggle -->
+            <button onclick="toggleThemeMode()" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-yellow-400 hover:bg-yellow-400/20 transition-all" title="Toggle Theme">
+                <i id="themeIcon" class="fa-solid fa-sun text-xs"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Universal Search Bar -->
+    <div class="px-4 pt-16 pb-2 sm:hidden">
+        <div class="relative">
+            <input type="text" placeholder="Universal Search (YouTube, OTT, Reels)..." class="w-full bg-cyberdark/90 text-xs text-white placeholder-cyan-400/50 px-4 py-2.5 rounded-xl border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-3.5 top-3 text-neoncyan text-xs"></i>
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN APP VIEWS CONTAINER (5 TABS) ================= -->
+    <main class="flex-1 px-4 pt-2 max-w-7xl mx-auto w-full">
+
+        <!-- ================= TAB 1: HOME FEED ================= -->
+        <div id="tab-home" class="space-y-6 tab-content">
+            
+            <!-- CHIEF AI GUIDE & GUARDIAN PERMANENT SEAT -->
+            <section class="rounded-2xl glass-panel p-4 border
+<!DOCTYPE html>
+<html lang="hi" class="dark" id="htmlRoot">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MStram Pro - Chief AI Guide Master Ecosystem & 2050 Cyber Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyberdark: '#05050a',
+                        glassdark: 'rgba(13, 13, 26, 0.8)',
+                        neoncyan: '#00f0ff',
+                        neonpurple: '#9d00ff',
+                        neonpink: '#ff007f',
+                        neongreen: '#00ff66',
+                        vipgold: '#ffd700',
+                        dangerred: '#ff0033'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        body.dark {
+            background-color: #05050a;
+            color: #e2e8f0;
+        }
+        body.light {
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        body.dark .glass-panel {
+            background: rgba(18, 18, 38, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+        }
+        body.light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 150, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        body.dark .glass-header {
+            background: rgba(5, 5, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(157, 0, 255, 0.2);
+        }
+        body.light .glass-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        body.dark .glass-nav {
+            background: rgba(8, 8, 20, 0.85);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 240, 255, 0.2);
+        }
+        body.light .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 20px rgba(157, 0, 255, 0.4);
+        }
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+        }
+        .neon-glow-gold {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        .mstram-logo-gradient {
+            background: linear-gradient(135deg, #00f0ff, #ff007f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="dark min-h-screen flex flex-col pb-24 selection:bg-neoncyan selection:text-black" id="bodyElement">
+
+    <!-- ================= TOP HEADER, BRANDING, SEARCH, NOTIFICATION BELL & MASTER HUB ================= -->
+    <header class="glass-header fixed top-0 left-0 right-0 z-50 px-4 py-3 flex items-center justify-between gap-3">
+        <!-- Universal MStram Branding & Cyberpunk Logo -->
+        <div class="flex items-center gap-2.5 cursor-pointer" onclick="switchTab('home')">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-neoncyan via-neonpurple to-neonpink p-0.5 neon-glow-cyan flex items-center justify-center">
+                <div class="w-full h-full bg-cyberdark rounded-[10px] flex items-center justify-center">
+                    <i class="fa-solid fa-cube text-neoncyan text-lg animate-pulse"></i>
+                </div>
+            </div>
+            <div>
+                <h1 class="font-orbitron font-extrabold text-lg tracking-wider mstram-logo-gradient">MStram</h1>
+                <span class="text-[10px] font-orbitron text-neongreen tracking-widest block -mt-1">CHIEF AI GUIDE SEAT</span>
+            </div>
+        </div>
+
+        <!-- Universal Search Bar -->
+        <div class="flex-1 max-w-md relative hidden sm:block">
+            <input type="text" id="universalSearchInput" placeholder="Universal Search (YouTube, OTT, TikTok, Reels, Rare Movies)..." class="w-full bg-cyberdark/80 text-xs text-white placeholder-cyan-400/50 px-4 py-2 rounded-full border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-4 top-2.5 text-neoncyan text-xs"></i>
+        </div>
+
+        <!-- Right Action Icons: Notification Bell, Security Shield, Master Hub, VIP, Dark/Light -->
+        <div class="flex items-center gap-2">
+            <!-- Notification Bell with Red Dot & Count Badge -->
+            <button onclick="toggleModal('notificationsModal')" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neonpink hover:bg-neonpink/20 transition-all relative" title="Notifications">
+                <i class="fa-solid fa-bell text-sm"></i>
+                <span class="absolute -top-1 -right-1 w-4 h-4 bg-dangerred text-white text-[9px] font-orbitron font-bold rounded-full flex items-center justify-center border border-cyberdark animate-bounce">3</span>
+            </button>
+
+            <!-- Anti-Copycat Shield Status -->
+            <button onclick="openSecurityDashboard()" class="px-2 py-1.5 rounded-xl bg-neongreen/20 text-neongreen border border-neongreen/40 font-orbitron font-bold text-[10px] flex items-center gap-1 active:scale-95 transition-transform" title="Anti-Copycat AI Shield Active">
+                <i class="fa-solid fa-shield-halved animate-pulse"></i> <span class="hidden md:inline">SHIELD</span>
+            </button>
+
+            <!-- VIP Pass Badge -->
+            <button onclick="toggleModal('vipPassModal')" class="px-2.5 py-1.5 rounded-xl bg-gradient-to-r from-vipgold to-neonpink text-black font-orbitron font-extrabold text-[10px] neon-glow-gold flex items-center gap-1.5 active:scale-95 transition-transform">
+                <i class="fa-solid fa-crown"></i> <span id="vipBadgeText">VIP</span>
+            </button>
+
+            <!-- Master Features Hub Icon -->
+            <button onclick="toggleMasterHub()" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neoncyan hover:bg-neoncyan/20 neon-glow-cyan transition-all relative group" title="Master 152+ Hub">
+                <i class="fa-solid fa-grid-2 text-sm group-hover:rotate-90 transition-transform duration-300"></i>
+                <span class="absolute -bottom-1 -right-1 w-3 h-3 bg-neongreen rounded-full border-2 border-cyberdark"></span>
+            </button>
+
+            <!-- Dark/Light Mode Toggle -->
+            <button onclick="toggleThemeMode()" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-yellow-400 hover:text-yellow-300 transition-all" title="Toggle Theme">
+                <i id="themeIcon" class="fa-solid fa-sun text-xs"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Universal Search Bar -->
+    <div class="px-4 pt-16 pb-2 sm:hidden">
+        <div class="relative">
+            <input type="text" placeholder="Universal Search (YouTube, OTT, Reels)..." class="w-full bg-cyberdark/90 text-xs text-white placeholder-cyan-400/50 px-4 py-2.5 rounded-xl border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-3.5 top-3 text-neoncyan text-xs"></i>
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN APP VIEWS CONTAINER (5 TABS) ================= -->
+    <main class="flex-1 px-4 pt-2 max-w-7xl mx-auto w-full">
+
+        <!-- ================= TAB 1: HOME FEED ================= -->
+        <div id="tab-home" class="space-y-6 tab-content">
+            
+            <!-- CHIEF AI GUIDE & GUARDIAN PERMANENT SEAT -->
+            <section class="rounded-2xl glass-panel p-4 border border-neonpurple/50 neon-glow-purple relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="absolute -left-10 -top-10 w-32 h-32 bg-neonpurple/20 rounded-full blur-2xl pointer-events-none"></div>
+                <div class="flex items-center gap-3.5">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-neonpurple to-neonpink p-0.5 flex-shrink-0 neon-glow-pink">
+                        <div class="w-full h-full bg-cyberdark rounded-[14px] flex items-center justify-center text-neonpink text-xl">
+                            <i class="fa-solid fa-robot animate-bounce"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-0.5">
+                        <div class="flex items-center gap-2">
+                            <h3 class="font-orbitron font-bold text-sm text-white">Chief AI Guide & Algorithm Master Seat</h3>
+                            <span class="px-1.5 py-0.2 rounded bg-neongreen/20 text-neongreen text-[9px] font-orbitron">Permanent Guardian</span>
+                        </div>
+                        <p id="aiGuideText" class="text-xs text-gray-300">"नमस्ते Sajeel! मैं Chief AI Guide हूँ। मेरी पक्की गद्दी से चारों एल्गोरिदम्स और 25 तारीख के पेआउट सिस्टम की पूरी देखरेख हो रही है।"</p>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="triggerAiAssistantAudio()" class="px-3 py-2 rounded-xl glass-panel text-neoncyan font-orbitron text-xs hover:bg-neoncyan/20 transition-all whitespace-nowrap">
+                        <i class="fa-solid fa-volume-high mr-1"></i> Speak Guide
+                    </button>
+                    <button onclick="toggleMasterHub()" class="px-3 py-2 rounded-xl bg-gradient-to-r from-neoncyan to-neonpurple text-cyberdark font-orbitron font-bold text-xs hover:neon-glow-cyan transition-all whitespace-nowrap">
+                        <i class="fa-solid fa-store mr-1"></i> Master Hub
+                    </button>
+                </div>
+            </section>
+
+            <!-- Top Commercial Ad Poster & 4-Pillar Algorithm Status -->
+            <section class="relative rounded-2xl overflow-hidden glass-panel p-5 border border-neoncyan/40 neon-glow-cyan group">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-neoncyan/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="space-y-1.5">
+                        <span class="px-2 py-0.5 bg-neongreen/20 text-neongreen border border-neongreen/40 rounded text-[10px] font-orbitron font-bold uppercase">4-Pillar Smart Recommendation Algorithms Active</span>
+                        <h2 class="font-orbitron font-bold text-lg sm:text-xl text-white">MStram Zero-Cost Creator Ecosystem</h2>
+                        <p class="text-xs text-gray-300 max-w-xl">Shorts (3s retention), Long Video, Live Stream, and Bazaar algorithms powered by Chief AI Guide.</p>
+                    </div>
+                    <button onclick="toggleModal('withdrawalModal')" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-neongreen to-neoncyan text-cyberdark font-orbitron font-bold text-xs hover:neon-glow-cyan transition-all active:scale-95 whitespace-nowrap">
+                        <i class="fa-solid fa-wallet mr-1.5"></i> 25th Payday Scoreboard
+                    </button>
+                </div>
+            </section>
+
+            <!-- Shorts Horizontal Scroll Row -->
+            <section class="space-y-3">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-orbitron font-bold text-sm text-white flex items-center gap-2">
+                        <i class="fa-solid fa-bolt-lightning text-neonpink"></i> Shorts Algorithm Feed (3s Retention Tracker)
+                    </h3>
+                    <span class="text-xs text-neoncyan cursor-pointer hover:underline" onclick="switchTab('shorts')">View All</span>
+                </div>
+
+                <div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+                    <div onclick="openInAppPlayer('dQw4w9WgXcQ', 'Secret of Ancient Homo Longi in 2050', 'MStram Official')" class="min-w-[130px] sm:min-w-[150px] h-[220px] rounded-xl glass-panel relative overflow-hidden group cursor
+<!DOCTYPE html>
+<html lang="hi" class="dark" id="htmlRoot">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MStram Pro - Dual-AI Nuclear Pre-Emptive Strike Ecosystem & 2050 Cyber Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyberdark: '#05050a',
+                        glassdark: 'rgba(13, 13, 26, 0.8)',
+                        neoncyan: '#00f0ff',
+                        neonpurple: '#9d00ff',
+                        neonpink: '#ff007f',
+                        neongreen: '#00ff66',
+                        vipgold: '#ffd700',
+                        dangerred: '#ff0033'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        body.dark {
+            background-color: #05050a;
+            color: #e2e8f0;
+        }
+        body.light {
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        body.dark .glass-panel {
+            background: rgba(18, 18, 38, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+        }
+        body.light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 150, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        body.dark .glass-header {
+            background: rgba(5, 5, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(157, 0, 255, 0.2);
+        }
+        body.light .glass-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        body.dark .glass-nav {
+            background: rgba(8, 8, 20, 0.85);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 240, 255, 0.2);
+        }
+        body.light .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 20px rgba(157, 0, 255, 0.4);
+        }
+        .neon-glow-pink {
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+        }
+        .neon-glow-gold {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        .nuclear-glow {
+            box-shadow: 0 0 25px rgba(255, 0, 51, 0.7);
+        }
+        .mstram-logo-gradient {
+            background: linear-gradient(135deg, #00f0ff, #ff007f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="dark min-h-screen flex flex-col pb-24 selection:bg-neoncyan selection:text-black" id="bodyElement">
+
+    <!-- ================= TOP HEADER, BRANDING, SEARCH, NOTIFICATION BELL & MASTER HUB ================= -->
+    <header class="glass-header fixed top-0 left-0 right-0 z-50 px-4 py-3 flex items-center justify-between gap-3">
+        <!-- Universal MStram Branding & Cyberpunk Logo -->
+        <div class="flex items-center gap-2.5 cursor-pointer" onclick="switchTab('home')">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-neoncyan via-neonpurple to-neonpink p-0.5 neon-glow-cyan flex items-center justify-center">
+                <div class="w-full h-full bg-cyberdark rounded-[10px] flex items-center justify-center">
+                    <i class="fa-solid fa-cube text-neoncyan text-lg animate-pulse"></i>
+                </div>
+            </div>
+            <div>
+                <h1 class="font-orbitron font-extrabold text-lg tracking-wider mstram-logo-gradient">MStram</h1>
+                <span class="text-[10px] font-orbitron text-neongreen tracking-widest block -mt-1">DUAL-AI COMMAND SEAT</span>
+            </div>
+        </div>
+
+        <!-- Universal Search Bar -->
+        <div class="flex-1 max-w-md relative hidden sm:block">
+            <input type="text" id="universalSearchInput" placeholder="Universal Search (YouTube, OTT, TikTok, Reels, Rare Movies)..." class="w-full bg-cyberdark/80 text-xs text-white placeholder-cyan-400/50 px-4 py-2 rounded-full border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-4 top-2.5 text-neoncyan text-xs"></i>
+        </div>
+
+        <!-- Right Action Icons: Notification Bell, Nuclear Strike Sentinel, Master Hub, VIP, Dark/Light -->
+        <div class="flex items-center gap-2">
+            <!-- Notification Bell with Red Dot & Count Badge -->
+            <button onclick="toggleModal('notificationsModal')" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neonpink hover:bg-neonpink/20 transition-all relative" title="Notifications">
+                <i class="fa-solid fa-bell text-sm"></i>
+                <span class="absolute -top-1 -right-1 w-4 h-4 bg-dangerred text-white text-[9px] font-orbitron font-bold rounded-full flex items-center justify-center border border-cyberdark animate-bounce">3</span>
+            </button>
+
+            <!-- Nuclear Pre-Emptive Strike Sentinel Button -->
+            <button onclick="openNuclearStrikeModal()" class="px-2.5 py-1.5 rounded-xl bg-dangerred/20 text-dangerred border border-dangerred/60 font-orbitron font-bold text-[10px] flex items-center gap-1 active:scale-95 transition-transform nuclear-glow" title="Nuclear Pre-Emptive Strike Sentinel">
+                <i class="fa-solid fa-radiation animate-spin" style="animation-duration: 4s;"></i> <span class="hidden md:inline">NUCLEAR STRIKE</span>
+            </button>
+
+            <!-- VIP Pass Badge -->
+            <button onclick="toggleModal('vipPassModal')" class="px-2.5 py-1.5 rounded-xl bg-gradient-to-r from-vipgold to-neonpink text-black font-orbitron font-extrabold text-[10px] neon-glow-gold flex items-center gap-1.5 active:scale-95 transition-transform">
+                <i class="fa-solid fa-crown"></i> <span id="vipBadgeText">VIP</span>
+            </button>
+
+            <!-- Master Features Hub Icon -->
+            <button onclick="toggleMasterHub()" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-neoncyan hover:bg-neoncyan/20 neon-glow-cyan transition-all relative group" title="Master 152+ Hub">
+                <i class="fa-solid fa-grid-2 text-sm group-hover:rotate-90 transition-transform duration-300"></i>
+                <span class="absolute -bottom-1 -right-1 w-3 h-3 bg-neongreen rounded-full border-2 border-cyberdark"></span>
+            </button>
+
+            <!-- Dark/Light Mode Toggle -->
+            <button onclick="toggleThemeMode()" class="w-9 h-9 rounded-xl glass-panel flex items-center justify-center text-yellow-400 hover:text-yellow-300 transition-all" title="Toggle Theme">
+                <i id="themeIcon" class="fa-solid fa-sun text-xs"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Universal Search Bar -->
+    <div class="px-4 pt-16 pb-2 sm:hidden">
+        <div class="relative">
+            <input type="text" placeholder="Universal Search (YouTube, OTT, Reels)..." class="w-full bg-cyberdark/90 text-xs text-white placeholder-cyan-400/50 px-4 py-2.5 rounded-xl border border-neoncyan/30 focus:outline-none focus:border-neoncyan neon-glow-cyan transition-all">
+            <i class="fa-solid fa-globe absolute right-3.5 top-3 text-neoncyan text-xs"></i>
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN APP VIEWS CONTAINER (5 TABS) ================= -->
+    <main class="flex-1 px-4 pt-2 max-w-7xl mx-auto w-full">
+
+        <!-- ================= TAB 1: HOME FEED ================= -->
+        <div id="tab-home" class="space-y-6 tab-content">
+            
+            <!-- CHIEF AI GUIDE & DUAL-AI COMMAND SEAT -->
+            <section class="rounded-2xl glass-panel p-4 border border-neonpurple/50 neon-glow-purple relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="absolute -left-10 -top-10 w-32 h-32 bg-neonpurple/20 rounded-full blur-2xl pointer-events-none"></div>
+                <div class="flex items-center gap-3.5">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-neonpurple to-neonpink p-0.5 flex-shrink-0 neon-glow-pink">
+                        <div class="w-full h-full bg-cyberdark rounded-[14px] flex items-center justify-center text-neonpink text-xl">
+                            <i class="fa-solid fa-robot animate-bounce"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-0.5">
+                        <div class="flex items-center gap-2">
+                            <h3 class="font-orbitron font-bold text-sm text-white">Chief AI Guide & Dual-AI Command Seat</h3>
+                            <span class="px-1.5 py-0.2 rounded bg-dangerred/20 text-dangerred text-[9px] font-orbitron font-bold">Nuclear Sentinel Active</span>
+                        </div>
+                        <p id="aiGuideText" class="text-xs text-gray-300">"नमस्ते Sajeel! Dual-AI कमांड और Nuclear Pre-Emptive Strike Sentinel पूरी तरह तैयार हैं। विरोधी टेक जायंट्स के वार से पहले ही काउंटर-ऑपरेशन लॉन्च करने के लिए रेडी रहें।"</p>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="triggerAiAssistantAudio()" class="px-3 py-2 rounded-xl glass-panel text-neoncyan font-orbitron text-xs hover:bg-neoncyan/20 transition-all whitespace-nowrap">
+                        <i class="fa-solid fa-volume-high mr-1"></i> Speak Guide
+                    </button>
+                    <button onclick="openNuclearStrikeModal()" class="px-3 py-2 rounded-xl bg-gradient-to-r from-dangerred to-neonpink text-white font-orbitron font-bold text-xs nuclear-glow transition-all whitespace-nowrap">
+                        <i class="fa-solid fa-radiation mr-1"></i> Launch Strike
+                    </button>
+                </div>
+            </section>
+
+            <!-- Top Commercial Ad Poster & 4-Pillar Algorithm Status -->
+            <section class="relative rounded-2xl overflow-hidden glass-panel p-5 border border-neoncyan/40 neon-glow-cyan group">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-neoncyan/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="space-y-1.5">
+                        <span class="px-2 py-0.5 bg-neongreen/20 text-neongreen border border-neongreen/40 rounded text-[10px] font-orbitron font-bold uppercase">4-Pillar Smart Recommendation & Dual-AI Active</span>
+                        <h2 class="font-orbitron font-bold text-lg sm:text-xl text-white">MStram Zero-Cost Creator Ecosystem</h2>
+                        <p class="text-xs text-gray-300 max-w-xl">Shorts (3s retention), Long Video, Live Stream, and Bazaar algorithms managed under Dual-AI Command.</p>
+                    </div>
+                    <button onclick="toggleModal('withdrawalModal')" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-neongreen to-neoncyan text-cyberdark font-orbitron font-bold text-xs hover:neon-glow-cyan transition-all active:scale-95 whitespace-nowrap">
+                        <i class="fa-solid fa-wallet mr-1.5"></i> 25th Payday Scoreboard
+                    </button>
+                </div>
+            </section>
+
+            <!-- Shorts Horizontal Scroll Row -->
+            <section class="space-y-3">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-orbitron font-bold text-sm text-white flex items-center gap-2">
+                        <i class="fa-solid fa-bolt-lightning text-neonpink"></i> Shorts Algorithm Feed (3s Retention Tracker)
+                    </h3>
+                    <span class="text-xs text-neoncyan cursor-pointer hover:underline" onclick="switchTab('shorts')">View All</span>
+                </div>
+
+                <div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+                    <div onclick="openInAppPlayer('dQw4w9WgXcQ', 'Secret of Ancient Homo Longi in 2050', 'MStram Official')" class="min-w-[130px] sm:min-w-[150px] h-[220px] rounded-xl glass-panel relative overflow-hidden group cursor-pointer border border-neonpink/30 hover:neon-glow-pink transition-all">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Thumbnail">
+                        <div class="absolute top-2 left-2 z-20 bg-black/70 backdrop-blur-md px-1.5 py-0.5 rounded text-[8px] font-orbitron mstram-logo-gradient font-bold">MStram Pro</div>
+                        <div class="absolute top-2 right-2 z-20 bg-black/60 backdrop-blur-md px-1.5 py-0.5 rounded text-[9px] font-orbitron text-neonpink"><i class="fa-solid fa-play text-[8px]"></i> 1.2M</div>
+                        <div class="absolute bottom-2 left-2 right-2 z-20">
+                            <span class="text-[9px] text-neoncyan block font-orbitron">#MStramAI</span>
+                            <p class="text-xs font-semibold text-white line-clamp-2 leading-tight">Secret of Ancient Homo Longi</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Long Video Feed with Red Progress Line -->
+            <section class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-orbitron font-bold text-sm text-white flex items-center gap-2">
+                        <i class="fa-solid fa-cubes text-neoncyan"></i> Long Video & Gaming Algorithm Feed
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="glass-panel rounded-2xl overflow-hidden border border-neoncyan/25 hover:border-neoncyan/70 transition-all group cursor-pointer flex flex-col justify-between" onclick="openInAppPlayer('dQw4w9WgXcQ', 'MStram Official: The Rise of Homo Longi & Ancient Giants in 2050', 'MStram Official')">
+                        <div>
+                            <div class="relative aspect-video bg-cyberdark overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Thumbnail">
+                                <div class="absolute top-2 left-2 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-orbitron mstram-logo-gradient font-bold">MStram 4K</div>
+                                <div class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-orbitron text-neoncyan">24:15</div>
+                                
+                                <div class="absolute bottom-0 inset-x-0 h-1.5 bg-gray-700/80">
+                                    <div class="h-full bg-dangerred w-[65%]"></div>
+                                </div>
+                            </div>
+                            <div class="p-3.5 space-y-2">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-gradient-to-r from-neoncyan to-neonpurple p-0.5 flex-shrink-0">
+                                        <div class="w-full h-full bg-cyberdark rounded-full flex items-center justify-center font-orbitron font-bold text-xs text-neoncyan">MS</div>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-xs text-white line-clamp-2 leading-snug group-hover:text-neoncyan transition-colors">MStram Official: The Rise of Homo Longi & Ancient Giants in 2050</h4>
+                                        <p class="text-[11px] text-gray-400 mt-0.5">MStram Official • 52 views • 2 hours ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mx-3.5 mb-3.5 p-2 rounded-xl bg-neoncyan/10 border border-neoncyan/30 flex items-center justify-between text-[11px]">
+                            <span class="text-neoncyan font-orbitron"><i class="fa-solid fa-rectangle-ad"></i> MStram Sponsored Ad</span>
+                            <span class="text-neongreen font-bold">Watch-to-Earn Active</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- ================= TAB 2: SHORTS & REELS VIEWER ================= -->
+        <div id="tab-shorts" class="hidden tab-content space-y-4">
+            <div class="max-w-md mx-auto h-[74vh] glass-panel rounded-3xl relative overflow-hidden flex flex-col justify-between p-4 border border-neonpink/40 neon-glow-pink">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop')] bg-cover bg-center -z-10 opacity-70"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 -z-10"></div>
+                
+                <div id="shortsTrendingBar" class="bg-black/80 backdrop-blur-md rounded-xl p-2.5 flex items-center justify-between text-[11px] font-orbitron border border-neonpink/30">
+                    <span class="text-neonpink"><i class="fa-solid fa-fire"></i> Streaming Algorithm Active</span>
+                    <button onclick="alert('Switching to MStram LIVE stream audio feed...')" class="px-2 py-1 rounded bg-neonpink text-white text-[10px] animate-pulse">🔴 LIVE</button>
+                </div>
+
+                <div class="absolute right-4 bottom-24 flex flex-col items-center gap-4">
+                    <button onclick="this.classList.toggle('text-neonpink');" class="flex flex-col items-center text-white">
+                        <div class="w-10 h-10 rounded-full glass-panel flex items-center justify-center mb-1 text-neonpink"><i class="fa-solid fa-heart text-sm"></i></div>
+                        <span class="text-[10px] font-orbitron">48.2K</span>
+                    </button>
+                </div>
+
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-neoncyan/20 border border-neoncyan flex items-center justify-center font-orbitron text-xs text-neoncyan">MS</div>
+                        <span class="font-orbitron font-bold text-xs text-white">MStram Shorts Algorithm Feed</span>
+                        <button onclick="alert('Subscribed to MStram Network!')" class="px-2.5 py-0.5 rounded-full bg-neoncyan text-cyberdark text-[10px] font-orbitron font-bold">Follow</button>
+                    </div>
+                    <p class="text-xs text-gray-200 line-clamp-2">Powered by Dual-AI Command & Nuclear Strike Sentinel! #MStram #Reels #TikTok</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ================= TAB 3: CREATE / UPLOAD ================= -->
+        <!-- Accessed via bottom center upload button -->
+
+
+        <!-- ================= TAB 4: SUBSCRIPTIONS ================= -->
+        <div id="tab-subscriptions" class="hidden tab-content space-y-4">
+            <h2 class="font-orbitron font-bold text-base text-white flex items-center gap-2">
+                <i class="fa-solid fa-satellite-dish text-neoncyan"></i> MStram Subscribed Quantum Networks ('All' Notifications)
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="glass-panel p-4 rounded-2xl flex items-center justify-between border border-neoncyan/20">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-neoncyan to-neonpurple p-0.5">
+                            <div class="w-full h-full bg-cyberdark rounded-[10px] flex items-center justify-center font-orbitron font-bold text-neoncyan">MS</div>
+                        </div>
+                        <div>
+                            <h4 class="font-orbitron font-bold text-sm text-white">MStram Official</h4>
+                            <p class="text-xs text-gray-400">12.4M Subscribers • 3 new videos</p>
+                        </div>
+                    </div>
+                    <span class="px-2.5 py-1 rounded-xl bg-neongreen/20 text-neongreen text-xs font-orbitron"><i class="fa-solid fa-bell"></i> All</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ================= TAB 5: PROFILE / YOU HUB / WALLET ================= -->
+        <div id="tab-profile" class="hidden tab-content space-y-5">
+            <div class="glass-panel p-5 rounded-3xl relative overflow-hidden border border-neoncyan/30 neon-glow-cyan space-y-4">
+                <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+                    <div class="relative">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-neoncyan via-neonpurple to-neonpink p-1">
+                            <div class="w-full h-full bg-cyberdark rounded-xl flex items-center justify-center font-orbitron font-extrabold text-2xl text-neoncyan">SJ</div>
+                        </div>
+                        <button onclick="toggleModal('editChannelModal')" class="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-neoncyan text-cyberdark flex items-center justify-center text-xs shadow-lg" title="Edit Channel">
+                            <i class="fa-solid fa-pencil"></i>
+                        </button>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex items-center justify-center sm:justify-start gap-2">
+                            <h2 id="profileChannelName" class="font-orbitron font-bold text-lg text-white">Sajeel Creator Hub</h2>
+                            <span class="px-2 py-0.5 rounded-full bg-gradient-to-r from-vipgold to-neonpink text-black font-orbitron font-extrabold text-[9px] neon-glow-gold flex items-center gap-1">
+                                <i class="fa-solid fa-crown"></i> DUAL-AI COMMANDER
+                            </span>
+                        </div>
+                        <p class="text-xs text-gray-300">@SajeelMStram2050 • Karachi, Pakistan • Streak: 🔥 14 Days</p>
+                        <div class="flex items-center justify-center sm:justify-start gap-3 pt-1 text-xs font-orbitron">
+                            <span class="text-neongreen"><i class="fa-solid fa-wallet"></i> Watch-to-Earn Scoreboard: <span id="viewerWalletBalance">$142.50</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-3 border-t border-white/10">
+                    <button onclick="toggleModal('downloadsModal')" class="p-2.5 rounded-xl glass-panel text-neoncyan font-orbitron text-xs flex items-center justify-center gap-2 hover:bg-neoncyan/20">
+                        <i class="fa-solid fa-download"></i> Downloads
+                    </button>
+                    <button onclick="toggleModal('analyticsModal')" class="p-2.5 rounded-xl glass-panel text-neonpurple font-orbitron text-xs flex items-center justify-center gap-2 hover:bg-neonpurple/20">
+                        <i class="fa-solid fa-chart-line"></i> Analytics
+                    </button>
+                    <button onclick="toggleModal('withdrawalModal')" class="p-2.5 rounded-xl glass-panel text-neongreen font-orbitron text-xs flex items-center justify-center gap-2 hover:bg-neongreen/20">
+                        <i class="fa-solid fa-money-bill-transfer"></i> 25th Payout
+                    </button>
+                    <button onclick="toggleMasterHub()" class="p-2.5 rounded-xl bg-gradient-to-r from-neoncyan to-neonpurple text-cyberdark font-orbitron font-bold text-xs flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-store"></i> Master Hub
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- ================= 5 FIXED ICONS BOTTOM NAVIGATION BAR ================= -->
+    <nav class="glass-nav fixed bottom-0 left-0 right-0 z-40 px-4 py-2 flex items-center justify-around">
+        <button onclick="switchTab('home')" id="nav-home" class="flex flex-col items-center gap-0.5 text-neoncyan transition-all group">
+            <i class="fa-solid fa-house text-lg group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-orbitron font-semibold">Home</span>
+        </button>
+        <button onclick="switchTab('shorts')" id="nav-shorts" class="flex flex-col items-center gap-0.5 text-gray-400 hover:text-neonpink transition-all group">
+            <i class="fa-solid fa-bolt text-lg group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-orbitron font-semibold">Shorts</span>
+        </button>
+        <button onclick="toggleModal('uploadMenuModal')" class="relative -top-3 w-14 h-14 rounded-2xl bg-gradient-to-tr from-neoncyan via-neonpurple to-neonpink p-0.5 neon-glow-cyan group active:scale-95 transition-transform" title="Upload & Create Menu">
+            <div class="w-full h-full bg-cyberdark rounded-[14px] flex items-center justify-center text-white group-hover:bg-transparent transition-colors">
+                <i class="fa-solid fa-plus text-xl text-neoncyan group-hover:text-black transition-colors"></i>
+            </div>
+        </button>
+        <button onclick="switchTab('subscriptions')" id="nav-subscriptions" class="flex flex-col items-center gap-0.5 text-gray-400 hover:text-neoncyan transition-all group">
+            <i class="fa-solid fa-satellite-dish text-lg group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-orbitron font-semibold">Subs</span>
+        </button>
+        <button onclick="switchTab('profile')" id="nav-profile" class="flex flex-col items-center gap-0.5 text-gray-400 hover:text-neongreen transition-all group relative">
+            <i class="fa-solid fa-user text-lg group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-orbitron font-semibold">You</span>
+            <!-- VIP Settings Gear Icon in Profile Tab -->
+            <button onclick="event.stopPropagation(); toggleModal('vipSettingsModal');" class="absolute -top-1 -right-3 text-neoncyan hover:rotate-90 transition-transform" title="VIP Settings Panel">
+                <i class="fa-solid fa-gear text-xs"></i>
+            </button>
+        </button>
+    </nav>
+
+
+    <!-- ================= FLOATING AI CHAT ASSISTANT ================= -->
+    <div class="fixed bottom-20 right-4 z-50">
+        <button onclick="toggleModal('aiChatModal')" class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-neonpurple to-neonpink text-white flex items-center justify-center text-xl neon-glow-pink hover:scale-110 transition-transform shadow-2xl" title="Dual-AI Command Chat">
+            <i class="fa-solid fa-robot"></i>
+        </button>
+    </div>
+
+
+    <!-- ================= NUCLEAR PRE-EMPTIVE STRIKE SENTINEL MODAL ================= -->
+    <div id="nuclearStrikeModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-2xl hidden flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-lg rounded-3xl p-6 border border-dangerred/80 nuclear-glow space-y-5 text-xs text-center">
+            <div class="flex items-center justify-between pb-3 border-b border-dangerred/40">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-radiation text-dangerred text-2xl animate-spin" style="animation-duration: 3s;"></i>
+                    <h3 class="font-orbitron font-extrabold text-sm text-white">Nuclear Pre-Emptive Strike Sentinel</h3>
+                </div>
+                <button onclick="toggleModal('nuclearStrikeModal')" class="w-8 h-8 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="space-y-3">
+                <div class="p-4 rounded-2xl bg-dangerred/15 border border-dangerred/40 space-y-2">
+                    <span class="font-orbitron font-bold text-dangerred text-sm block">🚨 Ultimate Counter-Operation Ready</span>
+                    <p class="text-gray-200">यह Nuclear Sentinel विरोधी टेक जायंट्स (YouTube/TikTok) के किसी भी वार करने से *पहले ही* एक ऐसा डिजिटल धमाका और काउंटर-ऑपरेशन लॉन्च करता है जिससे उनके पूरे प्लेटफॉर्म पर सन्नाटा छा जाता है और सारे क्रिएटर्स सुनामी की तरह MStram Pro पर खिंचे चले आते हैं!</p>
+                </div>
+                
+                <button onclick="launchNuclearPreEmptiveStrike()" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-dangerred via-neonpink to-neonpurple text-white font-orbitron font-extrabold text-sm nuclear-glow active:scale-95 transition-transform">
+                    <i class="fa-solid fa-biohazard mr-2"></i> LAUNCH NUCLEAR PRE-EMPTIVE STRIKE NOW
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= MASTER HUB & ALL 5 BUSINESS ECOSYSTEM MODAL ================= -->
+    <div id="masterHubModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-2xl hidden flex items-center justify-center p-3 sm:p-6">
+        <div class="glass-panel w-full max-w-5xl max-h-[92vh] rounded-3xl p-6 border border-neoncyan/50 neon-glow-cyan flex flex-col overflow-hidden">
+            <div class="flex items-center justify-between pb-4 border-b border-neoncyan/20">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-10 h-10 rounded-xl bg-neoncyan/20 flex items-center justify-center text-neoncyan text-lg">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-orbitron font-extrabold text-base sm:text-lg text-white">MStram Master Business & 5 Core Ecosystem Hub</h3>
+                        <p class="text-[11px] text-gray-300">All 5 Dedicated Businesses, Bazaar Algorithm & Creator AI Studio</p>
+                    </div>
+                </div>
+                <button onclick="toggleMasterHub()" class="w-9 h-9 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-sm"></i></button>
+            </div>
+            
+            <div class="flex-1 overflow-y-auto py-4 space-y-6 pr-2 text-xs">
+                
+                <!-- SECTION 1: ALL 5 DEDICATED BUSINESSES -->
+                <div class="space-y-3">
+                    <h4 class="font-orbitron font-bold text-sm text-neoncyan flex items-center gap-2">
+                        <i class="fa-solid fa-briefcase"></i> MStram 5 Core Business Engines (Zero Cost / High Revenue)
+                    </h4>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                        
+                        <!-- 1. MStram Bazaar -->
+                        <div onclick="openBusinessModule('MStram Bazaar', 'Storefront & Local Marketplace')" class="glass-panel p-4 rounded-xl border border-neoncyan/40 hover:border-neoncyan cursor-pointer space-y-2 group transition-all">
+                            <div class="flex items-center justify-between">
+                                <div class="w-10 h-10 rounded-xl bg-neoncyan/20 flex items-center justify-center text-neoncyan text-lg group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-store"></i>
+                                </div>
+                                <span class="px-2 py-0.5 rounded bg-neoncyan/20 text-neoncyan text-[9px] font-orbitron font-bold">Fixed Commission</span>
+                            </div>
+                            <h5 class="font-orbitron font-bold text-white text-xs">1. 🛒 MStram Bazaar</h5>
+                            <p class="text-[10px] text-gray-300">Digital storefronts & local marketplace for creators and local vendors with fixed platform commission.</p>
+                        </div>
+
+                        <!-- 2. Hype Boost & Flash Promo -->
+                        <div onclick="openBusinessModule('Hype Boost & Flash Promo', 'Instant Ad Auction Banner')" class="glass-panel p-4 rounded-xl border border-neonpink/40 hover:border-neonpink cursor-pointer space-y-2 group transition-all">
+                            <div class="flex items-center justify-between">
+                                <div class="w-10 h-10 rounded-xl bg-neonpink/20 flex items-center justify-center text-neonpink text-lg group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-rocket"></i>
+                                </div>
+                                <span class="px-2 py-0.5 rounded bg-neonpink/20 text-neonpink text-[9px] font-orbitron font-bold">Instant Fees</span>
+                            </div>
+                            <h5 class="font-orbitron font-bold text-white text-xs">2. ⚡ Hype Boost & Flash Promo</h5>
+                            <p class="text-[10px] text-gray-300">Instant ad auction where businesses pay a fee to get top banner promotion instantly on home screen.</p>
+                        </div>
+
+                        <!-- 3. Global Gaming Tournaments -->
+                        <div onclick="openBusinessModule('Global Gaming Tournaments', 'Esports League Hub')" class="glass-panel p-4 rounded-xl border border-neongreen/40 hover:border-neongreen cursor-pointer space-y-2 group transition-all">
+                            <div class="flex items-center justify-between">
+                                <div class="w-10 h-10 rounded-xl bg-neongreen/20 flex items-center justify-center text-neongreen text-lg group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-gamepad"></i>
+                                </div>
+                                <span class="px-2 py-0.5 rounded bg-neongreen/20 text-neongreen text-[9px] font-orbitron font-bold">3-Ad Free Entry</span>
+                            </div>
+                            <h5 class="font-orbitron font-bold text-white text-xs">3. 🎮 Global Gaming Tournaments</h5>
+                            <p class="text-[10px] text-gray-300">Weekly/monthly esports leagues where gamers compete in GTA/Cyber games and win dollar cash prizes.</p>
+                        </div>
+
+                        <!-- 4. Cyber Gear Affiliate Store -->
+                        <div onclick="openBusinessModule('Cyber Gear Affiliate Store', 'Tech & Gadgets Hub')" class="glass-panel p-4 rounded-xl border border-neonpurple/40 hover:border-neonpurple cursor-pointer space-y-2 group transition-all">
+                            <div class="flex items-center justify-between">
+                                <div class="w-10 h-10 rounded-xl bg-neonpurple/20 flex items-center justify-center text-neonpurple text-lg group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-headset"></i>
+                                </div>
+                                <span class="px-2 py-0.5 rounded bg-neonpurple/20 text-neonpurple text-[9px] font-orbitron font-bold">Affiliate Revenue</span>
+                            </div>
+                            <h5 class="font-orbitron font-bold text-white text-xs">4. 🛍️ Cyber Gear Affiliate Store</h5>
+                            <p class="text-[10px] text-gray-300">Permanent working affiliate links and hardware store for ring lights, mics, and creator gadgets.</p>
+                        </div>
+
+                        <!-- 5. Brand Partnership Hub -->
+                        <div onclick="openBusinessModule('Brand Partnership Hub', 'Direct Sponsorship Network')" class="glass-panel p-4 rounded-xl border border-vipgold/40 hover:border-vipgold cursor-pointer space-y-2 group transition-all sm:col-span-2 lg:col-span-1">
+                            <div class="flex items-center justify-between">
+                                <div class="w-10 h-10 rounded-xl bg-vipgold/20 flex items-center justify-center text-vipgold text-lg group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-handshake"></i>
+                                </div>
+                                <span class="px-2 py-0.5 rounded bg-vipgold/20 text-vipgold text-[9px] font-orbitron font-bold">Direct Sponsors</span>
+                            </div>
+                            <h5 class="font-orbitron font-bold text-white text-xs">5. 🤝 Brand Partnership Hub</h5>
+                            <p class="text-[10px] text-gray-300">Direct sponsorship network connecting global brands and advertisers with top MStram creators.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SECTION 2: CREATOR AI STUDIO & TOURNAMENT ARENA -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                    <div class="glass-panel p-4 rounded-2xl border border-neonpurple/40 space-y-3">
+                        <h4 class="font-orbitron font-bold text-xs text-neonpurple flex items-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Creator AI Studio (Script, Voice & Thumbnail)
+                        </h4>
+                        <input type="text" id="aiTopicInput" placeholder="Enter video topic (e.g., Homo Longi in 2050)..." class="w-full bg-cyberdark text-white p-2.5 rounded-xl border border-neonpurple/30">
+                        <button onclick="generateAiStudioContent()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-neonpurple to-neonpink text-white font-orbitron font-bold text-xs">Generate Viral Script, Voice & Thumbnail</button>
+                    </div>
+
+                    <div class="glass-panel p-4 rounded-2xl border border-neongreen/40 space-y-3">
+                        <h4 class="font-orbitron font-bold text-xs text-neongreen flex items-center gap-2">
+                            <i class="fa-solid fa-trophy"></i> Esports Tournament Free Entry (3 Ads)
+                        </h4>
+                        <p class="text-gray-300">विकल्प चुनें: $5 फीस देकर तुरंत खेलें या 3 स्पॉन्सर्ड विज्ञापन देखकर फ्री एंट्री पाएं!</p>
+                        <div class="flex gap-2">
+                            <button onclick="enterTournamentPaid(5)" class="flex-1 py-2 rounded-xl bg-neongreen text-cyberdark font-orbitron font-bold text-xs">Pay $5 Entry</button>
+                            <button onclick="watchAdsForTournamentFree()" class="flex-1 py-2 rounded-xl bg-neongreen/20 text-neongreen border border-neongreen/40 font-orbitron font-bold text-xs">Watch 3 Ads (Free)</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= THE VIP SETTINGS PANEL MODAL ================= -->
+    <div id="vipSettingsModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-2xl hidden flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-lg rounded-3xl p-6 border border-neoncyan/70 neon-glow-cyan space-y-5 text-xs max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between pb-3 border-b border-neoncyan/35">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-gear text-neoncyan text-lg animate-spin" style="animation-duration: 8s;"></i>
+                    <h3 class="font-orbitron font-bold text-sm text-white">MStram VIP Settings Panel</h3>
+                </div>
+                <button onclick="toggleModal('vipSettingsModal')" class="w-8 h-8 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- 1. Account & Security (Scoreboard Wallet) -->
+                <div class="p-3.5 rounded-2xl glass-panel border border-neoncyan/30 space-y-2">
+                    <h4 class="font-orbitron font-bold text-neoncyan flex items-center gap-1.5"><i class="fa-solid fa-wallet"></i> Account & Security (Scoreboard Wallet)</h4>
+                    <p class="text-gray-300">JazzCash / EasyPaisa & Scoreboard Email linked for 25th Payday automatic transfer.</p>
+                    <button onclick="toggleModal('vipSettingsModal'); toggleModal('withdrawalModal');" class="px-3 py-1.5 rounded-xl bg-neoncyan text-cyberdark font-orbitron font-bold text-[11px]">Manage Scoreboard Payout</button>
+                </div>
+
+                <!-- 2. TikTok-Style Offline Smart Cloud Storage Manager -->
+                <div class="p-3.5 rounded-2xl glass-panel border border-neonpink/30 space-y-2">
+                    <h4 class="font-orbitron font-bold text-neonpink flex items-center gap-1.5"><i class="fa-solid fa-cloud-arrow-down"></i> Offline Smart Cloud Storage</h4>
+                    <p class="text-gray-300">इंटरनेट न होने पर ऑफलाइन देखने के लिए स्टोरेज स्पेस चुनें:</p>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button onclick="setOfflineStorage('500MB', '20 Videos')" class="p-2 rounded-xl bg-cyberdark border border-neonpink/40 text-white font-orbitron text-center hover:border-neonpink">500 MB<br><span class="text-[9px] text-gray-400">20 Videos</span></button>
+                        <button onclick="setOfflineStorage('1GB', '60 Videos')" class="p-2 rounded-xl bg-cyberdark border border-neonpink/40 text-white font-orbitron text-center hover:border-neonpink">1 GB<br><span class="text-[9px] text-gray-400">60 Videos</span></button>
+                        <button onclick="setOfflineStorage('2GB', '120 Videos')" class="p-2 rounded-xl bg-cyberdark border border-neonpink/40 text-white font-orbitron text-center hover:border-neonpink">2 GB<br><span class="text-[9px] text-gray-400">120 Videos</span></button>
+                    </div>
+                </div>
+
+                <!-- 3. Dual-AI Command & Anti-Copycat Shield -->
+                <div class="p-3.5 rounded-2xl glass-panel border border-neongreen/30 space-y-2">
+                    <h4 class="font-orbitron font-bold text-neongreen flex items-center gap-1.5"><i class="fa-solid fa-shield-halved"></i> Dual-AI & Anti-Copycat Shield</h4>
+                    <p class="text-gray-300">4-Pillar Smart Recommendation & Nuclear Sentinel status: <span class="text-neongreen font-bold">100% Active</span></p>
+                    <button onclick="openSecurityDashboard()" class="px-3 py-1.5 rounded-xl bg-neongreen/20 text-neongreen border border-neongreen/40 font-orbitron font-bold text-[11px]">View Shield Details</button>
+                </div>
+
+                <!-- 4. Theme Controls -->
+                <div class="p-3.5 rounded-2xl glass-panel border border-purple-500/30 space-y-2">
+                    <h4 class="font-orbitron font-bold text-purple-400 flex items-center gap-1.5"><i class="fa-solid fa-palette"></i> Cyberpunk Theme Controls</h4>
+                    <button onclick="toggleThemeMode()" class="w-full py-2 rounded-xl bg-purple-600/20 text-purple-300 border border-purple-500/40 font-orbitron font-bold">Toggle Dark / Light Neon Mode</button>
+                </div>
+
+                <!-- 5. Dual-AI Command Support -->
+                <div class="p-3.5 rounded-2xl glass-panel border border-vipgold/30 space-y-2">
+                    <h4 class="font-orbitron font-bold text-vipgold flex items-center gap-1.5"><i class="fa-solid fa-robot"></i> Dual-AI Command Seat</h4>
+                    <button onclick="toggleModal('vipSettingsModal'); toggleModal('aiChatModal');" class="w-full py-2 rounded-xl bg-gradient-to-r from-vipgold to-neonpink text-black font-orbitron font-extrabold">Open Dual-AI Chat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= NOTIFICATIONS MODAL ================= -->
+    <div id="notificationsModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-xl hidden flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-md rounded-3xl p-6 border border-neonpink/50 space-y-4 text-xs">
+            <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                <h3 class="font-orbitron font-bold text-sm text-white"><i class="fa-solid fa-bell text-neonpink"></i> MStram Notifications</h3>
+                <button onclick="toggleModal('notificationsModal')" class="w-8 h-8 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="space-y-2.5">
+                <div class="p-3 rounded-xl glass-panel border border-neonpink/30 space-y-1">
+                    <span class="font-bold text-white">🚀 GitHub Pages Deployment Successful!</span>
+                    <p class="text-[10px] text-gray-400">Dual-AI Command & Nuclear Strike Sentinel are fully active.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= UPLOAD MENU MODAL ================= -->
+    <div id="uploadMenuModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-xl hidden flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-md rounded-3xl p-6 border border-neonpurple/50 neon-glow-purple space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                <h3 class="font-orbitron font-bold text-base text-white"><i class="fa-solid fa-cloud-arrow-up text-neonpurple"></i> MStram Quantum Upload Suite</h3>
+                <button onclick="toggleModal('uploadMenuModal')" class="w-8 h-8 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="space-y-3 text-xs">
+                <button onclick="toggleModal('uploadMenuModal'); toggleModal('uploadFormModal');" class="w-full p-3 rounded-xl glass-panel flex items-center gap-3 text-left hover:bg-neoncyan/20 border border-neoncyan/30">
+                    <i class="fa-solid fa-video text-neoncyan text-lg"></i>
+                    <div>
+                        <h4 class="font-orbitron font-bold text-white">Upload with Anti-Copycat AI Scanner</h4>
+                        <p class="text-[10px] text-gray-300">Scans for stolen reuploads & protects original talent</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= DETAILED UPLOAD FORM MODAL ================= -->
+    <div id="uploadFormModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl hidden flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-lg rounded-3xl p-6 border border-neoncyan/50 neon-glow-cyan space-y-4 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                <h3 class="font-orbitron font-bold text-sm text-white"><i class="fa-solid fa-upload text-neoncyan"></i> MStram Creator Upload & Hashtag Studio</h3>
+                <button onclick="toggleModal('uploadFormModal')" class="w-8 h-8 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="space-y-3 text-xs">
+                <div class="space-y-1">
+                    <label class="text-gray-300 font-semibold">Video Title</label>
+                    <input type="text" id="uploadTitleInput" placeholder="Enter catchy title..." class="w-full bg-cyberdark text-white p-2.5 rounded-xl border border-neoncyan/30">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-gray-300 font-semibold">Description (30-50 Hashtags Supported)</label>
+                    <textarea rows="3" class="w-full bg-cyberdark text-white p-2.5 rounded-xl border border-neoncyan/30">#MStram #MStramPro #KissaToonic #PKBhai #Quantum #AI #Shorts #Trending #Karachi #Pakistan #2050 #Gaming #FreeFire #GTA5 #Tech #Creator #Viral #Explore #Studio #Vlog #Hologram #SciFi #Future #Animation #Stories #Monetization #Pass #Wallet #Earnings #Ads #Stream</textarea>
+                </div>
+                <button onclick="inspectAndPublishVideo()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-neoncyan to-neongreen text-cyberdark font-orbitron font-bold text-xs">Run Anti-Copycat Scan & Publish</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= FLOATING DUAL-AI CHAT ASSISTANT ================= -->
+    <div id="aiChatModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-xl hidden flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-md rounded-3xl p-5 border border-neonpink/50 neon-glow-pink space-y-4 flex flex-col h-[75vh]">
+            <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-xl bg-neonpink/20 flex items-center justify-center text-neonpink"><i class="fa-solid fa-robot"></i></div>
+                    <h3 class="font-orbitron font-bold text-sm text-white">Chief AI Guide & Nuclear Sentinel</h3>
+                </div>
+                <button onclick="toggleModal('aiChatModal')" class="w-8 h-8 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="chatMessages" class="flex-1 overflow-y-auto space-y-3 text-xs pr-2">
+                <div class="p-3 rounded-2xl glass-panel bg-cyberdark/60 text-gray-200">नमस्ते Sajeel! मैं Dual-AI Command से बोल रहा हूँ। विरोधी टेक जायंट्स पर Nuclear Pre-Emptive Strike लॉन्च करने के लिए तैयार रहें!</div>
+            </div>
+            <div class="flex gap-2 pt-2 border-t border-white/10">
+                <input type="text" id="chatInput" placeholder="Ask Dual-AI Command anything..." class="flex-1 bg-cyberdark text-white text-xs px-3 py-2.5 rounded-xl border border-neonpink/30">
+                <button onclick="sendAiChatMessage()" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-neonpink to-neonpurple text-white font-orbitron text-xs">Send</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= QUANTUM ANTI-COPYCAT SHIELD DASHBOARD ================= -->
+    <div id="securityDashboardModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-2xl hidden flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-lg rounded-3xl p-6 border border-neongreen/75 neon-glow-cyan space-y-4 text-xs">
+            <div class="flex items-center justify-between pb-3 border-b border-neongreen/30">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-neongreen text-xl animate-pulse"></i>
+                    <h3 class="font-orbitron font-bold text-sm text-white">MStram Quantum Anti-Copycat & Dual-AI Shield</h3>
+                </div>
+                <button onclick="toggleModal('securityDashboardModal')" class="w-8 h-8 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="space-y-3">
+                <div class="p-3 rounded-xl bg-neongreen/10 border border-neongreen/30 space-y-1">
+                    <span class="font-orbitron font-bold text-neongreen block">🛡️ Zero Tolerance for Reuploads & Stolen Content</span>
+                    <p class="text-gray-300">यह शील्ड हर चोरी किए गए वीडियो को पकड़ती है, और साथ ही Nuclear Pre-Emptive Strike Sentinel विरोधी टेक जायंट्स पर काउंटर-ऑपरेशन के लिए तैयार है।</p>
+                </div>
+                <button onclick="simulateCopycatAnnihilation()" class="w-full py-2.5 rounded-xl bg-dangerred text-white font-orbitron font-bold">Simulate Copycat Stolen Video Block</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= EDIT CHANNEL MODAL ================= -->
+    <div id="editChannelModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-xl hidden flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-md rounded-3xl p-6 border border-neoncyan/50 space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                <h3 class="font-orbitron font-bold text-sm text-white"><i class="fa-solid fa-pencil text-neoncyan"></i> Edit MStram Channel Identity</h3>
+                <button onclick="toggleModal('edit
